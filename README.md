@@ -5,6 +5,13 @@ An edtech proof of concept to capture student attention and study their curricul
 
 ## Wireframes
 
+
+### Home page
+![Home Page Wirframe](img/mainPage.png)
+
+### Play game page
+![Play Game Wireframe](img/playGame.png)
+
 ### About us page
 ![about us page - wireframe](img/about-wireframe.png)
 
