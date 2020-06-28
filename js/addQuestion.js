@@ -79,6 +79,11 @@ function chooseCategory() {
     optionMath.innerHTML = 'Math';
     var optionGeneral = document.createElement('option');
     optionGeneral.innerHTML = 'General';
+    var optionEnglish = document.createElement('option');
+    optionEnglish.innerHTML = 'English';
+    var optionCities = document.createElement('option');
+    optionCities.innerHTML = 'Cities';
+
     //number of question
     var questionQuantityArea = document.createElement('input');
     var button = document.createElement('input');
@@ -86,6 +91,8 @@ function chooseCategory() {
     button.innerHTML = 'Go';
     select.appendChild(optionMath);
     select.appendChild(optionGeneral);
+    select.appendChild(optionEnglish);
+    select.appendChild(optionCities);
     fieldset.appendChild(select);
     fieldset.appendChild(questionQuantityArea);
     fieldset.appendChild(button);

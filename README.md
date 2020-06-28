@@ -5,26 +5,23 @@ An edtech proof of concept to capture student attention and study their curricul
 
 
 
+### Login page
+![login page - wireframe](img/wireframes/login-wireframe.png)
+
 ### Home page
-![Home Page Wirframe](img/mainPage.png)
+![Home Page Wirframe](img/wireframes/main-page.png)
 
 ### Play game page
-![Play Game Wireframe](img/playGame.png)
+![Play Game Wireframe](img/wireframes/play-game.png)
 
-### About us page
-![about us page - wireframe](img/about-wireframe.png)
+### Add to the game page
+![logo page - wireframe](img/wireframes/add-page.png)
 
 ### Journal page
-![journal page - wireframe](img/journal-wireframe.png)
+![journal page - wireframe](img/wireframes/journal-wireframe.png)
 
-
-### Login page
-![login page - wireframe](img/loginWireframe.png)
+### About us page
+![about us page - wireframe](img/wireframes/about-wireframe.png)
 
 ## Model Diagram
-![model-Diagram](img/dominModeling.png)
-
-### Logo page
-![logo page - wireframe](img/wireframe-logo.png)
-
-
+![model-Diagram](img/wireframes/domain-modelling.PNG)
