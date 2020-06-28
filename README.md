@@ -6,8 +6,8 @@ An edtech proof of concept to capture student attention and study their curricul
 ## Wireframes
 ![about us page - wireframe](img/about-wireframe.PNG)
 ![journal page - wireframe](img/journal-wireframe.PNG)
-![login page - wireframe](img/wireframe-rania.png)
+![logo page - wireframe](img/wireframe-logo.png)
 
 
 ## Model Diagram
-![model-Diagram](img/domain-modelling.jpeg)
+![Domain Modeling](img/domain-modelling.PNG)
