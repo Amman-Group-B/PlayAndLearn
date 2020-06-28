@@ -12,7 +12,7 @@ An edtech proof of concept to capture student attention and study their curricul
 ![journal page - wireframe](img/journal-wireframe.png)
 
 ### Login page
-![login page - wireframe](img/login-wireframe.png.png)
+![login page - wireframe](img/login-wireframe.png)
 
 ## Model Diagram
 ![model-Diagram](img/domain-modelling.jpeg)
