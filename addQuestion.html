@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<nav>
+    <a href="index.html">Home</a>
+
+</nav>
+
+<body>
+    <form id="addQuestionForm">
+        <fieldset>
+            <label for="category">Category</label>
+            <select id="category">
+                <option>Math</option>
+                <option>General</option>
+            </select><br>
+            
+            <label for="question">Question Text</label>
+            <input type="text" id="question" required><br>
+
+            <label for="imgSrc">Image URL</label>
+            <input type="text" id="imgSrc" required><br>
+
+            <label for="choiceA">Choice A</label>
+            <input type="text" id="choiceA" required><br>
+
+            <label for="choiceB">Choice B</label>
+            <input type="text" id="choiceB" required><br>
+
+            <label for="choiceC">Choice C</label>
+            <input type="text" id="choiceC" required><br>
+
+            <label for="correctAnswer">Right Answer Number</label>
+            <input type="text" id="correctAnswer" maxlength="1" max="C" placeholder="A,B,C" required><br>
+            <input id="addQuestionButton" type="submit" value="xx">
+        </fieldset>
+    </form>
+
+
+  
+
+
+
+
+
+
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>
