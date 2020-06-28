@@ -4,10 +4,15 @@ An edtech proof of concept to capture student attention and study their curricul
 [Read more in the requirements](requirements.md)
 
 ## Wireframes
-![about us page - wireframe](img/about-wireframe.PNG)
-![journal page - wireframe](img/journal-wireframe.PNG)
-![login page - wireframe](img/wireframe-rania.png)
 
+### About us page
+![about us page - wireframe](img/about-wireframe.png)
+
+### Journal page
+![journal page - wireframe](img/journal-wireframe.png)
+
+### Login page
+![login page - wireframe](img/login-wireframe.png.png)
 
 ## Model Diagram
 ![model-Diagram](img/domain-modelling.jpeg)
