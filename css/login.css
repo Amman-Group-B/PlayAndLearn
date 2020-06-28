@@ -1,0 +1,110 @@
+
+/* ---------------------- Side Icons ---------------------- */
+
+.bar {
+  width: 64px; /* Set a specific width */
+  background-color: rgb(148, 148, 148); /* Dark-grey background */
+  position: fixed;
+  top: 15%
+}
+.bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 8px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 1em; /* Increased font-size */
+  background-color: rgb(46, 46, 46); /* Dark-grey background */
+
+}
+.bar a:hover {
+  background-color: rgb(109, 109, 109); /* Add a hover color */
+}
+.bar .active {
+  background-color: #4CAF50; /* Add an active/current color */
+}
+.disabled {           /*disable score if not login*/
+  cursor: not-allowed;
+}
+.disabled a {
+  pointer-events: none;
+}
+
+/* ---------------------- Modal Login ---------------------- */
+
+/* Updated CSS with open selector */
+.modal.open {
+  transition: transform 0.5s linear, opacity 0.5s;
+  transform: translateX(0%);
+  opacity:1;
+}
+.modal {
+  /* Update CSS with transition and transform rules */
+  transition: transform 0.5s linear, opacity 0.5s;
+  transform: translateX(-100%);
+  opacity:0.1;
+  position: fixed;
+  z-index: 1;
+  top: 25%;
+  width: 300px;
+  height: fit-content;
+  overflow: auto;
+  background-color: rgba(180, 180, 180, 0.8);
+}
+.modal-content {
+
+}
+.close {
+  color: #323232;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #424242;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------------------- Login Content ---------------------- */
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 250px;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+/* Avatar image */
+img.avatar {
+  width: 64px;
+  border-radius: 50%;
+}
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  display: grid;
+  text-align: left;
+}
+.container button {
+  display: block;
+  width: 70px;
+  border: none;
+  padding: 5px;
+}
+label span {
+  margin: 0 0 0 10px;
+  color: red
+}
+span.psw {
+  margin: 0 auto;
+}
+
