@@ -145,6 +145,7 @@ var generalQuestions = [
         correct: "A"
     }
 ];
+// console.log('')
 if(!localStorage.getItem('mathQuestions')){
 
 localStorage.setItem('mathQuestions',JSON.stringify(mathQuestions));}

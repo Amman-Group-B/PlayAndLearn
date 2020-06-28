@@ -208,7 +208,7 @@ function scoreRender() {
 
 
 var addQuestionButton = document.getElementById('addQuestionButton');
-addQuestionButton.addEventListener("click",addQuestion);
+//addQuestionButton.addEventListener("click",addQuestion);
 
 //Add questions
 function addQuestion() {
