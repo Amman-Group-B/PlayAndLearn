@@ -5,6 +5,7 @@ Watch The Tutorial On Youtube:
 https://www.youtube.com/watch?v=49pYIMygIcU
 
 
-![about us page - wireframe](img/about us page wireframe.PNG)
+![about us page - wireframe](img/about-wireframe.PNG)
+
 
 
