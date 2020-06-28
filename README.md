@@ -3,7 +3,6 @@ An edtech proof of concept to capture student attention and study their curricul
 
 [Read more in the requirements](requirements.md)
 
-## Wireframes
 
 
 ### Home page
@@ -18,8 +17,14 @@ An edtech proof of concept to capture student attention and study their curricul
 ### Journal page
 ![journal page - wireframe](img/journal-wireframe.png)
 
+
 ### Login page
 ![login page - wireframe](img/loginWireframe.png)
 
 ## Model Diagram
 ![model-Diagram](img/dominModeling.png)
+
+### Logo page
+![logo page - wireframe](img/wireframe-logo.png)
+
+
