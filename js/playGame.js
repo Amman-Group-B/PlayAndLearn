@@ -46,8 +46,6 @@ function renderQuestion() {
     choiceC.innerHTML = q.choiceC;
 }
 // start.addEventListener("click", chooseCategory);
-chooseClick = document.getElementById('choose');
-chooseClick.addEventListener('click', chooseCategory);
 var mathImage = document.getElementById('math');
 var generalImage = document.getElementById('general');
 var arabicImage = document.getElementById('arabic');
@@ -71,7 +69,6 @@ englishImage.addEventListener('click', function(){
 
 // start quiz
 function chooseCategory(categ) {
-    start.style.display = 'none';
     questionQuantity = parseInt(prompt('Enter # of questions: ', 5)) -1;
 
     coverFlow.style.display = 'none'
@@ -101,7 +98,6 @@ function chooseCategory(categ) {
 function startQuiz() {
     //start.style.display = "none";
     renderQuestion();
-    quiz.style.display = "block";
     renderProgress();
     renderCounter();
     TIMER = setInterval(renderCounter, 1000); // 1000ms = 1s

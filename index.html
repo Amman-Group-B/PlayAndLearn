@@ -1,91 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/login.css">
-     <!-- icons -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     -->
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+        type="text/javascript"></script>
+    <link rel="stylesheet" href="css/coverFlow.css">
+
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+
 
 </head>
+<nav>
+
+</nav>
 
 <body>
-    <header>
-        <div>
-            <img src="img/logo-2-e.png" height="50px">
-        </div>
-
-<nav>
-    <ul>
-        <li>
-            <a href="index.html">HOME</a>
-            </li>
-        <li>
-            <a href="js/questions.js"> PLAY</a>
-           </li>
-           <li>
-               JOURNAL
-           </li>
-        <li><a href="aboutUs.html">ABOUT US</a>
-        </li>
-    </ul>
-</nav>
-    </header>
-    <main>
-    <div id="slide">
-        <div class="bar">
-        <a class="active" href="#" onclick="toggleLoginModal()"><i class="fa fa-sign-in"></i></a>
-        <a href="#" id="scoreBtn" class="disabled"><i class="fa fa-star-half-o"></i></a>
-        </div>
-
-        <div id="loginModal" class="modal modal_move open">
-            <div class="modal-content">
-                <form id="login">
-                    <div class="imgcontainer">
-                        <img id="avatarDefault" src="img/avatars/avatar-default.png" alt="Avatar" class="avatar">
-                    </div>
-
-                    <div class="container">
-                        <label for="uname"><b>Username</b><span id="loginResult"></span></label>
-                        <input type="text" placeholder="Enter Your Username" id="uname" required>
-                    
-                        <label for="pwd"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" id="pwd" required>
-                    
-                        <button type="submit">Login</button>
-                    </div>
-
-                    <div class="container" style="background-color:#f1f1f1">
-                        <span class="psw">Forgot <a href="#">password?</a></span>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div id="infoModal" class="modal modal_move">
-            <div class="modal-content">
-                    <div class="imgcontainer">
-                        <img id="avatar" src="img/avatars/avatar-default.png" alt="Avatar" class="avatar">
-                    </div>
-                    <div class="container">
-                        <h1 id="name"></h1>
-                        <p id="intro"></p>
-                    </div>
-            </div>
-        </div>
+    <div>
+        <img src="img/logo-2-e.png" height="50px">
     </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="addQuestion.html"> Add Questions</a>
+            </li>
+            <li>
+                JOURNAL
+            </li>
+            <li><a href="aboutUs.html">ABOUT US</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+    <main>
+        <div id="coverflow">
+            <section id="math"
+                data-cover="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWNjPvVeaREIulnT4DgzVH7olodg2hxFn30w&usqp=CAU">
+            </section>
+            <section id="general"
+                data-cover="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBXqGtFin1o43lDryWqnE9Rcm2saysDNtz8A&usqp=CAU">
+            </section>
+            <section id="arabic" data-cover="https://ahlan.b-cdn.net/wp-content/uploads/arabic-modern-colloquial.jpg">
+            </section>
+            <section id="english"
+                data-cover="https://fluencycorp.com/wp-content/uploads/2019/01/hardest-part-learning-english.jpg">
+            </section>
+            <div id="controls">
+                <a id="prev">LEFT</a> <a id="next">RIGHT</a>
+            </div>
+        </div>
+
+        <hr>
+
+
+        <div id="container">
+
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+
+            <div id="scoreContainer" style="display: none"></div>
+        </div>
     </main>
-    <footer>
-        <div id="copyRight">
-            &copy; LTUC 
-        </div>
-        <div>
-            <img src="img/icons.png" height="50px">
-        </div>
-    </footer>
+    <script src="js/questions.js"></script>
+<script src="js/coverFlow.js"></script>
+<script src="js/playGame.js"></script>
 </body>
 
-<script src="js/login.js"></script>
+<footer>
+    <div id="copyRight">
+        &copy; LTUC 
+    </div>
+    <div>
+        <img src="img/icons.png" height="50px">
+    </div>
+</footer>
+
+
 </html>
