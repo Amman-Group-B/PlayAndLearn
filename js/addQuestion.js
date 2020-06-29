@@ -164,7 +164,7 @@ function renderCounter() {
     }
 }
 
-// checkAnwer
+// checkAnswer
 function checkAnswer(answer) {
     if (answer == questionsBank[categoryIndex][randomQuestionIndex].correct) {
         // answer is correct

@@ -23,7 +23,6 @@ var TIMER;
 var score = 0;
 var questionQuantity;
 var randomIndex;
-var randomQuestionIndex;
 var questionsBank = [];
 var categoryIndex;
 var questionsSourceArray=[];
@@ -32,11 +31,17 @@ var arabicQuestions = [];
 var generalQuestions = [];
 var englishQuestions = [];
 
+var randomQuestionIndex;
+
 // render a question
 function renderQuestion() {
     randomQuestionIndex = Math.floor(Math.random() * questionsSourceArray.length);
+    console.log('q: ' + questionsSourceArray[randomQuestionIndex]);
+
+    console.log('q: ' + questionsSourceArray);
+
     var q = questionsSourceArray[randomQuestionIndex];
-    console.log('q: ', q.correctAnswer);
+    console.log('q: ' + q.correctAnswer);
     question= document.getElementById("question");
     question.innerHTML = "<p>" + q.question + "</p>";
     qImg.innerHTML = "<img src=" + q.imgSrc + ">";
@@ -48,30 +53,37 @@ function renderQuestion() {
 start.addEventListener("click", chooseCategory);
 
 // start quiz
+var categArray = ['Math', 'General', 'Arabic', 'English'];
 function chooseCategory() {
     start.style.display = 'none';
+    // var optionMath = document.createElement('option');
+    // var optionGeneral = document.createElement('option');
+    // var optionArabic = document.createElement('option');
+    // var optionEnglish = document.createElement('option');
+    // optionMath.innerHTML = 'Math';
+    // optionGeneral.innerHTML = 'General';
+    // optionArabic.innerHTML = 'Arabic';    
+    // optionEnglish.innerHTML = 'English';
+    // select.appendChild(optionMath);
+    // select.appendChild(optionGeneral);
+    // select.appendChild(optionArabic);
+    // select.appendChild(optionEnglish);
 
-    var chooseCategoryForm = document.createElement('form');
-    var fieldset = document.createElement('fieldset');
-    var select = document.createElement('select');
-    var optionMath = document.createElement('option');
-    var optionGeneral = document.createElement('option');
-    var optionArabic = document.createElement('option');
-    var optionEnglish = document.createElement('option');
-    optionMath.innerHTML = 'Math';
-    optionGeneral.innerHTML = 'General';
-    optionArabic.innerHTML = 'Arabic';    
-    optionEnglish.innerHTML = 'English';
-
-    //number of question
+    //Render fieldset
     var questionQuantityArea = document.createElement('input');
     var button = document.createElement('input');
     button.type = 'submit';
     button.innerHTML = 'Go';
-    select.appendChild(optionMath);
-    select.appendChild(optionGeneral);
-    select.appendChild(optionArabic);
-    select.appendChild(optionEnglish);
+
+    var chooseCategoryForm = document.createElement('form');
+    var fieldset = document.createElement('fieldset');
+    var select = document.createElement('select');
+
+    for (var i = 0; i < categArray.length; i++) {
+        var option = document.createElement('option');
+        option.innerHTML = categArray[i];
+        select.appendChild(option);
+    }
 
     fieldset.appendChild(select);
     fieldset.appendChild(questionQuantityArea);
@@ -83,33 +95,31 @@ function chooseCategory() {
 
     chooseCategoryForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        questionQuantity = questionQuantityArea.value - 1;
+        questionQuantity = questionQuantityArea.value;
         var questionCategory = select.options[select.selectedIndex].value;
-        console.log('questionQuantity: ', questionQuantity);
-        console.log('questionCategory: ', questionCategory);
-
 
         chooseCategoryForm.innerHTML = '';
-        if (questionCategory == 'Math') {
-            questionsSourceArray = mathQuestions;
-        } else if (questionCategory == 'General') {
-            questionsSourceArray = generalQuestions;
-
-        }else if (questionCategory == 'Arabic') {
-            questionsSourceArray = arabicQuestions;
-
-        }else if (questionCategory == 'English') {
-            questionsSourceArray = englishQuestions;
-
-        }
-
+        fillQuestionsArray(questionCategory);
         startQuiz();
-
-
 
         //start.style.display = "Choose Category";
         //quiz.style.display = "block";
     })
+}
+
+function fillQuestionsArray(questionCategory) {
+    if (questionCategory == 'Math') {
+        questionsSourceArray = mathQuestions;
+        console.log(mathQuestions)
+    }else if (questionCategory == 'General') {
+        questionsSourceArray = generalQuestions;
+
+    }else if (questionCategory == 'Arabic') {
+        questionsSourceArray = arabicQuestions;
+
+    }else if (questionCategory == 'English') {
+        questionsSourceArray = englishQuestions;
+    }
 }
 
 function startQuiz() {
@@ -131,7 +141,7 @@ function renderProgress() {
 // counter render
 
 function renderCounter() {
-    if (count <= questionTime) {
+    if (count < questionTime) {
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
         count++
@@ -188,7 +198,7 @@ function answerIsWrong() {
 function scoreRender() {
     scoreDiv.style.display = "block";
     // calculate the amount of question percent answered by the user
-    var scorePerCent = Math.round(100 * score / (questionQuantity + 1));
+    var scorePerCent = Math.round(100 * score / (questionQuantity));
     // choose the image based on the scorePerCent
     var img = (scorePerCent >= 80) ? "img/5.png" :
         (scorePerCent >= 60) ? "img/4.png" :

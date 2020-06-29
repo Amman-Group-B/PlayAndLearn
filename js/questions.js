@@ -186,9 +186,12 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
         else if (this.category == 'math') {
             if (!localStorage.getItem('mathQuestions')) {
                 mathQuestions.push(this);
+                console.log('new')
             } else {
                 mathQuestions = JSON.parse(localStorage.getItem('mathQuestions'));
                 mathQuestions.push(this);
+                console.log('old')
+
             }
             localStorage.setItem('mathQuestions', JSON.stringify(mathQuestions));
         }
@@ -208,7 +211,6 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
 
             } else {
                 console.log('local storage contain english array');
-
                 englishQuestions = JSON.parse(localStorage.getItem('englishQuestions'));
                 englishQuestions.push(this);
             }
@@ -216,7 +218,6 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
 
         }
         else { console.log('No array for the category: ', this.category) }
-
     };
     this.addQuestionToArray();
     //localStorage.setItem(eval("this.category+ 'Questions'"),JSON.stringify(eval(this.category+ 'Questions')));    
