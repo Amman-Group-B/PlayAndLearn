@@ -223,6 +223,9 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
 
 }
 
+console.log()
+
+if (!localStorage.getItem('generalQuestions')) {
 new Question('english', 'https://fluencycorp.com/wp-content/uploads/2019/01/hardest-part-learning-english.jpg', 'q', 'aa', 'ab', 'ac', 'A');
 new Question('english', 'https://fluencycorp.com/wp-content/uploads/2019/01/hardest-part-learning-english.jpg', 'q', 'aa', 'ab', 'ac', 'A');
 new Question('english', 'https://fluencycorp.com/wp-content/uploads/2019/01/hardest-part-learning-english.jpg', 'q', 'aa', 'ab', 'ac', 'A');
@@ -238,4 +241,4 @@ new Question('general', 'https://www.thailandtourpackages.net/pages/1721348336.p
 new Question('math', 'https://image.freepik.com/free-vector/maths-chalkboard_23-2148178220.jpg', 'q', 'aa', 'ab', 'ac', 'A');
 new Question('math', 'https://image.freepik.com/free-vector/maths-chalkboard_23-2148178220.jpg', 'q', 'aa', 'ab', 'ac', 'A');
 new Question('math', 'https://image.freepik.com/free-vector/maths-chalkboard_23-2148178220.jpg', 'q', 'aa', 'ab', 'ac', 'A');
-
+}
