@@ -27,16 +27,22 @@ var randomQuestionIndex;
 var questionsBank = [];
 var categoryIndex;
 var questionsSourceArray=[];
-var mathQuestions = [];
-var arabicQuestions = [];
-var generalQuestions = [];
-var englishQuestions = [];
+// var mathQuestions = [];
+// var arabicQuestions = [];
+// var generalQuestions = [];
+// var englishQuestions = [];
+questionsSourceArray=mathQuestions;
+console.log('questionsSourceArray: ',questionsSourceArray);
+console.log('mathQuestions: ',mathQuestions);
+
 
 // render a question
 function renderQuestion() {
     randomQuestionIndex = Math.floor(Math.random() * questionsSourceArray.length);
     var q = questionsSourceArray[randomQuestionIndex];
-    console.log('q: ', q.correctAnswer);
+    console.log('questionsSourceArray: ', questionsSourceArray);
+
+    console.log('q: ', q);
     question= document.getElementById("question");
     question.innerHTML = "<p>" + q.question + "</p>";
     qImg.innerHTML = "<img src=" + q.imgSrc + ">";
@@ -91,15 +97,21 @@ function chooseCategory() {
 
         chooseCategoryForm.innerHTML = '';
         if (questionCategory == 'Math') {
-            questionsSourceArray = mathQuestions;
+            //questionsSourceArray = mathQuestions.slice();
+            questionsSourceArray = JSON.parse(localStorage.getItem('mathQuestions'));
+
         } else if (questionCategory == 'General') {
-            questionsSourceArray = generalQuestions;
+            questionsSourceArray = JSON.parse(localStorage.getItem('generalQuestions'));
 
         }else if (questionCategory == 'Arabic') {
-            questionsSourceArray = arabicQuestions;
+            //questionsSourceArray = arabicQuestions.slice();
+            questionsSourceArray = JSON.parse(localStorage.getItem('arabicQuestions'));
+
 
         }else if (questionCategory == 'English') {
-            questionsSourceArray = englishQuestions;
+            //questionsSourceArray = englishQuestions.slice();
+            questionsSourceArray = JSON.parse(localStorage.getItem('englishQuestions'));
+
 
         }
 
