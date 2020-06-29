@@ -81,6 +81,7 @@ function chooseCategory() {
     optionGeneral.innerHTML = 'General';
     //number of question
     var questionQuantityArea = document.createElement('input');
+    questionQuantityArea.placeholder='number of Questions';
     var button = document.createElement('input');
     button.type = 'submit';
     button.innerHTML = 'Go';
