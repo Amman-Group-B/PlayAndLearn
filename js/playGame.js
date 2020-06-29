@@ -11,9 +11,7 @@ var timeGauge = document.getElementById("timeGauge");
 var progress = document.getElementById("progress");
 var scoreDiv = document.getElementById("scoreContainer");
 var container = document.getElementById("container");
-
 // create some variables
-
 var runningQuestion = 0;
 var count = 0;
 var questionTime = 10; // 10s
@@ -34,14 +32,11 @@ var questionsSourceArray=[];
 questionsSourceArray=mathQuestions;
 console.log('questionsSourceArray: ',questionsSourceArray);
 console.log('mathQuestions: ',mathQuestions);
-
-
 // render a question
 function renderQuestion() {
     randomQuestionIndex = Math.floor(Math.random() * questionsSourceArray.length);
     var q = questionsSourceArray[randomQuestionIndex];
     console.log('questionsSourceArray: ', questionsSourceArray);
-
     console.log('q: ', q);
     question= document.getElementById("question");
     question.innerHTML = "<p>" + q.question + "</p>";
@@ -50,80 +45,59 @@ function renderQuestion() {
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
 }
+// start.addEventListener("click", chooseCategory);
+chooseClick = document.getElementById('choose');
+chooseClick.addEventListener('click', chooseCategory);
+var mathImage = document.getElementById('math');
+var generalImage = document.getElementById('general');
+var arabicImage = document.getElementById('arabic');
+var englishImage = document.getElementById('english');
 
-start.addEventListener("click", chooseCategory);
+var coverFlow = document.getElementById('coverflow');
+
+mathImage.addEventListener('click', function(){
+    chooseCategory('Math')
+})
+generalImage.addEventListener('click', function(){
+    chooseCategory('General')
+})
+arabicImage.addEventListener('click', function(){
+    chooseCategory('Arabic')
+})
+englishImage.addEventListener('click', function(){
+    chooseCategory('English');
+})
+
 
 // start quiz
-function chooseCategory() {
+function chooseCategory(categ) {
     start.style.display = 'none';
+    questionQuantity = parseInt(prompt('Enter # of questions: ', 5)) -1;
 
-    var chooseCategoryForm = document.createElement('form');
-    var fieldset = document.createElement('fieldset');
-    var select = document.createElement('select');
-    var optionMath = document.createElement('option');
-    var optionGeneral = document.createElement('option');
-    var optionArabic = document.createElement('option');
-    var optionEnglish = document.createElement('option');
-    optionMath.innerHTML = 'Math';
-    optionGeneral.innerHTML = 'General';
-    optionArabic.innerHTML = 'Arabic';    
-    optionEnglish.innerHTML = 'English';
+    coverFlow.style.display = 'none'
 
-    //number of question
-    var questionQuantityArea = document.createElement('input');
-    var button = document.createElement('input');
-    button.type = 'submit';
-    button.innerHTML = 'Go';
-    select.appendChild(optionMath);
-    select.appendChild(optionGeneral);
-    select.appendChild(optionArabic);
-    select.appendChild(optionEnglish);
-
-    fieldset.appendChild(select);
-    fieldset.appendChild(questionQuantityArea);
-    fieldset.appendChild(button);
-    chooseCategoryForm.appendChild(fieldset);
-    container.appendChild(chooseCategoryForm);
-
-
-
-    chooseCategoryForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        questionQuantity = questionQuantityArea.value - 1;
-        var questionCategory = select.options[select.selectedIndex].value;
+        // questionQuantity = questionQuantityArea.value - 1;
+        var questionCategory = categ;
         console.log('questionQuantity: ', questionQuantity);
         console.log('questionCategory: ', questionCategory);
 
-
-        chooseCategoryForm.innerHTML = '';
         if (questionCategory == 'Math') {
             //questionsSourceArray = mathQuestions.slice();
             questionsSourceArray = JSON.parse(localStorage.getItem('mathQuestions'));
-
         } else if (questionCategory == 'General') {
             questionsSourceArray = JSON.parse(localStorage.getItem('generalQuestions'));
-
         }else if (questionCategory == 'Arabic') {
             //questionsSourceArray = arabicQuestions.slice();
             questionsSourceArray = JSON.parse(localStorage.getItem('arabicQuestions'));
-
-
         }else if (questionCategory == 'English') {
             //questionsSourceArray = englishQuestions.slice();
             questionsSourceArray = JSON.parse(localStorage.getItem('englishQuestions'));
-
-
         }
-
         startQuiz();
-
-
-
         //start.style.display = "Choose Category";
         //quiz.style.display = "block";
-    })
 }
-
 function startQuiz() {
     //start.style.display = "none";
     renderQuestion();
@@ -132,16 +106,13 @@ function startQuiz() {
     renderCounter();
     TIMER = setInterval(renderCounter, 1000); // 1000ms = 1s
 }
-
 // render progress
 function renderProgress() {
     for (var qIndex = 0; qIndex <= questionQuantity; qIndex++) {
         progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
     }
 }
-
 // counter render
-
 function renderCounter() {
     if (count <= questionTime) {
         counter.innerHTML = count;
@@ -161,7 +132,6 @@ function renderCounter() {
         }
     }
 }
-
 // checkAnwer
 function checkAnswer(answer) {
     if (answer == questionsSourceArray[randomQuestionIndex].correctAnswer) {
@@ -184,18 +154,15 @@ function checkAnswer(answer) {
         scoreRender();
     }
 }
-
 // answer is correct
 function answerIsCorrect() {
     var x = document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
     console.log('x:', x);
 }
-
 // answer is Wrong
 function answerIsWrong() {
     document.getElementById(runningQuestion).style.backgroundColor = "#f00";
 }
-
 // score render
 function scoreRender() {
     scoreDiv.style.display = "block";
@@ -210,15 +177,11 @@ function scoreRender() {
     scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
 }
-
-
 var addQuestionButton = document.getElementById('addQuestionButton');
 //addQuestionButton.addEventListener("click",addQuestion);
-
 //Add questions
 function addQuestion() {
     event.preventDefault();
-
     var categori = document.getElementById('category');
     var category = categori.options[categori.selectedIndex].value;
     console.log('category: ', category);
@@ -229,8 +192,5 @@ function addQuestion() {
     var choiceC = document.getElementById('choiceC').value;
     var correctAnswer = document.getElementById('correctAnswer').value;
     new Question(question,imgSrc,choiceA,choiceB,choiceC,correctAnswer);
-    
-
-
 }
     //console.log('questions[0]: ', questions[0]);
