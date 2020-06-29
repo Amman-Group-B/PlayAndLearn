@@ -8,7 +8,7 @@
   categories = [],
   // _transformName = Modernizr.prefixed('transform'),
 
-  OFFSET = 70; 
+  OFFSET = 90; 
   ROTATION = 45;
   BASE_ZINDEX = 10; 
   MAX_ZINDEX = 42; 
@@ -72,8 +72,8 @@
   };
 
   function registerEvents() {
-      prevClick.addEventListener('click', flowRight, false);
-      nextClick.addEventListener('click', flowLeft, false);
+      prevClick.addEventListener('mouseover', flowRight, false);
+      nextClick.addEventListener('mouseover', flowLeft, false);
       document.addEventListener('keydown', keyDown, false);
   };
 
