@@ -1,0 +1,48 @@
+<!-- <script>
+export default {
+  data() {
+    return {
+      cardOne: "start"
+    };
+  }
+};
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/flashCards.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div id="coverflow">
+    <section id="math"
+        data-cover="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWNjPvVeaREIulnT4DgzVH7olodg2hxFn30w&usqp=CAU">
+    </section>
+    <section id="general"
+        data-cover="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBXqGtFin1o43lDryWqnE9Rcm2saysDNtz8A&usqp=CAU">
+    </section>
+    <section id="arabic" data-cover="https://ahlan.b-cdn.net/wp-content/uploads/arabic-modern-colloquial.jpg">
+    </section>
+    <section id="english"
+        data-cover="https://fluencycorp.com/wp-content/uploads/2019/01/hardest-part-learning-english.jpg">
+    </section>
+    <div id="controls">
+        <a id="prev">LEFT</a> <a id="next">RIGHT</a>
+    </div>
+</div> -->
+    <div id="cards" class="scene scene--card">
+      <div id="origin" class="card">
+        <div class="card__face card__face--front">front</div>
+        <div class="card__face card__face--back">back</div>
+      </div>
+    </div>
+    <div id="controls">
+      <p>Click card to flip.</p>
+      <a id="next">Next Card</a>
+    </div>
+</body>
+  <script src="js/flashCards.js"></script>
+</html>
