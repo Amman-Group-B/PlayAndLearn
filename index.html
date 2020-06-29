@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+     <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+
 </head>
 
 <body>
@@ -13,7 +18,47 @@
     </header>
 
     <main>
+    <div id="slide">
+        <div class="bar">
+        <a class="active" href="#" onclick="toggleLoginModal()"><i class="fa fa-sign-in"></i></a>
+        <a href="#" id="scoreBtn" class="disabled"><i class="fa fa-star-half-o"></i></a>
+        </div>
 
+        <div id="loginModal" class="modal modal_move open">
+            <div class="modal-content">
+                <form id="login">
+                    <div class="imgcontainer">
+                        <img id="avatarDefault" src="img/avatars/avatar-default.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                        <label for="uname"><b>Username</b><span id="loginResult"></span></label>
+                        <input type="text" placeholder="Enter Your Username" id="uname" required>
+                    
+                        <label for="pwd"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" id="pwd" required>
+                    
+                        <button type="submit">Login</button>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="infoModal" class="modal modal_move">
+            <div class="modal-content">
+                    <div class="imgcontainer">
+                        <img id="avatar" src="img/avatars/avatar-default.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="container">
+                        <h1 id="name"></h1>
+                        <p id="intro"></p>
+                    </div>
+            </div>
+        </div>
+    </div>
     </main>
 
     <footer>
