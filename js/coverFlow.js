@@ -77,8 +77,8 @@
   };
 
   function registerEvents() {
-    prevClick.addEventListener('mouseover', flowRight, false);
-    nextClick.addEventListener('mouseover', flowLeft, false);
+    prevClick.addEventListener('click', flowRight, false);
+    nextClick.addEventListener('click', flowLeft, false);
     document.addEventListener('keydown', keyDown, false);
   };
 

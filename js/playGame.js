@@ -66,34 +66,46 @@ englishImage.addEventListener('click', function(){
     chooseCategory('English');
 })
 
-
 // start quiz
 function chooseCategory(categ) {
-    questionQuantity = parseInt(prompt('Enter # of questions: ', 5)) -1;
+
+    var range = document.getElementById("myRange").value;
+    console.log('range: ',range)
+    var quantity = 0;
+    if (range <= 25) {
+        quantity = 2;
+        } else if (range <= 50) {
+            quantity = 4;
+        } else if (range <= 75) {
+            quantity = 8;
+        } else if (range < 100) {
+            quantity = 10;
+        } else if (range == 100) {
+            quantity = 15;            // implement all later !!!!!!!!!!
+        }
+    
+    questionQuantity = quantity;
 
     coverFlow.style.display = 'none'
 
-        event.preventDefault();
-        // questionQuantity = questionQuantityArea.value - 1;
-        var questionCategory = categ;
-        console.log('questionQuantity: ', questionQuantity);
-        console.log('questionCategory: ', questionCategory);
+    event.preventDefault();
+    var questionCategory = categ;
+    console.log('questionQuantity: ', questionQuantity);
+    console.log('questionCategory: ', questionCategory);
 
-        if (questionCategory == 'Math') {
-            //questionsSourceArray = mathQuestions.slice();
-            questionsSourceArray = JSON.parse(localStorage.getItem('mathQuestions'));
-        } else if (questionCategory == 'General') {
-            questionsSourceArray = JSON.parse(localStorage.getItem('generalQuestions'));
-        }else if (questionCategory == 'Arabic') {
-            //questionsSourceArray = arabicQuestions.slice();
-            questionsSourceArray = JSON.parse(localStorage.getItem('arabicQuestions'));
-        }else if (questionCategory == 'English') {
-            //questionsSourceArray = englishQuestions.slice();
-            questionsSourceArray = JSON.parse(localStorage.getItem('englishQuestions'));
-        }
-        startQuiz();
-        //start.style.display = "Choose Category";
-        //quiz.style.display = "block";
+    if (questionCategory == 'Math') {
+        //questionsSourceArray = mathQuestions.slice();
+        questionsSourceArray = JSON.parse(localStorage.getItem('mathQuestions'));
+    } else if (questionCategory == 'General') {
+        questionsSourceArray = JSON.parse(localStorage.getItem('generalQuestions'));
+    }else if (questionCategory == 'Arabic') {
+        //questionsSourceArray = arabicQuestions.slice();
+        questionsSourceArray = JSON.parse(localStorage.getItem('arabicQuestions'));
+    }else if (questionCategory == 'English') {
+        //questionsSourceArray = englishQuestions.slice();
+        questionsSourceArray = JSON.parse(localStorage.getItem('englishQuestions'));
+    }
+    startQuiz();
 }
 function startQuiz() {
     //start.style.display = "none";

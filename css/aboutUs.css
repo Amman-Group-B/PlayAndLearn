@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+body {
+    background: #DCF5FF;  
+    align-items: center;
+}
+header,footer{
+    font-family: 'Pangolin', cursive;
+    text-decoration: none;
+    width: 100%;
+    height: 60px;
+    background-color:#FDFFFC;
+}
+header div{
+    position: relative;;
+}
+header img{
+    position: absolute;
+    left: 20px;
+    margin: 0px;
+    top:5px;
+}
+header ul{
+position: absolute;
+left: 60%;
+padding:0px 5px 0px 5px;
+}
+header ul li{
+  bottom: 20px;
+  left: 60%;
+  color:#011672;
+    padding: 0px;
+    margin:5px 0px 5px 0px;
+   height: 30px;
+   width: 100px;
+   text-align: center;
+    padding:6px;
+    margin: 0px;
+    display: inline-block;
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color:#011672;
+}
+header ul :hover{
+    background-color:#011672 ;
+    color:#FDFFFC ;
+}
+header img:nth-child(1){
+animation:rotate infinite 1s;
+}
+@keyframes rotate{
+    0%{
+        rotate:(0deg);
+      }
+      100%{
+        rotate:(180deg);
+      }
+}
+footer {
+position: relative;
+    text-align: center;
+    margin: 0px;
+}
+footer div{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top:3px;
+}
+footer #copyRight{
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top:15px;
+}
+
+#aboutDevelopres img {
+    border-radius: 70px;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#aboutDevelopres img:hover{
+    transform: rotateY(130deg);
+    transition: 350ms;  
+}
+b{
+    font-size: 30px;
+    color:#eda92c;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.bio{
+    font-size: 25px;
+    font-family: 'Pangolin', cursive;
+    color:#011672;
+    border: black 2px;
+}
+#teamMembers{
+    font-family: 'Pangolin', cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: -6px;
+    color: #162b58 ;
+   
+}
+#aboutDevelopres{
+    width: 1298px; 
+    width: 1736px;
+    margin-top: 20px;  
+}
+
+#firstDeveloper  {
+    width: 400px;
+    float: left;
+    margin-left:272px;
+    margin-top: 75px;
+    text-align: center;
+    margin-bottom: 40px;  
+}
+#firstDeveloper:hover ,#secDeveloper:hover, #thiredDeveloper:hover, #fourthDeveloper:hover,#fifthDeveloper:hover{
+    background-image: linear-gradient(to right, #40a6d4, #DCF5FF);
+    box-shadow: 10px 10px 5px grey;
+}
+#secDeveloper{
+    width: 400px;
+    float: right;
+    margin-left: 46px;
+    margin-top: 75px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 555px;
+}
+#thiredDeveloper{
+    width: 400px;
+    float: left;
+    margin-left: 272px;
+    margin-top: 75px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#fourthDeveloper{
+    width: 400px;
+    float: right;
+    margin-top: 75px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 555px;
+}
+#fifthDeveloper{
+   position: static;
+    margin-bottom: 40px;
+    width: 999px;
+    text-align: center;
+    margin-left: 215px;
+}
+#ahmadImg{
+    position: static;
+    display: block;
+    margin-right: 295px;
+}
+#ahmadText {
+    margin-right: -122px;
+    width: 991px;
+}
+#aboutApp {
+    background-image: url(../img/background.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 47px;
+    width: 1298px;
+    height: 490px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    font-family: 'Pangolin', cursive;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #162b58 ;
+    box-shadow: 10px 10px 5px grey;
+    line-height: 1.8;
+    transition: 350ms;
+   
+}
+#playImg:hover{
+width: 300px;
+height:250px;
+box-shadow: 10px 10px 5px #162b58 ;
+}
+
+
+
+
