@@ -44,10 +44,9 @@ main {
 #controls {
   position: absolute;
   z-index: 1;
-  left: 46.5%;
-
+  width: 100%;
+  bottom: 0px;
   user-select: none;
-  background-color: rgba(255, 255, 255, 0.6);
   color: #999;
   font-size: 18px;
 }
@@ -59,4 +58,13 @@ main {
 
 #controls a:hover  {
   color: 66FFFF;
+}
+
+input[type="range" i] {
+  width: 400px;
+}
+
+#prev:active, #next:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
