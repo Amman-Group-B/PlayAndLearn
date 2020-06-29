@@ -6,12 +6,17 @@
   prevClick = null,
   nextClick = null,
   categories = [],
-  // _transformName = Modernizr.prefixed('transform'),
 
-  OFFSET = 90; 
+  OFFSET = 900; 
   ROTATION = 45;
   BASE_ZINDEX = 10; 
   MAX_ZINDEX = 42; 
+
+  
+  var mathImage = document.getElementById('math');
+  var generalImage = document.getElementById('general');
+  var arabicImage = document.getElementById('arabic');
+  var englishImage = document.getElementById('english');
 
   function get( selector ) {
       return document.querySelector( selector );
@@ -72,9 +77,9 @@
   };
 
   function registerEvents() {
-      prevClick.addEventListener('mouseover', flowRight, false);
-      nextClick.addEventListener('mouseover', flowLeft, false);
-      document.addEventListener('keydown', keyDown, false);
+    prevClick.addEventListener('mouseover', flowRight, false);
+    nextClick.addEventListener('mouseover', flowLeft, false);
+    document.addEventListener('keydown', keyDown, false);
   };
 
 
