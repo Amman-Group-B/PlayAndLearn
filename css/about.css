@@ -1,0 +1,169 @@
+body {
+    background-image: linear-gradient(to right, #162b58, #ff9800);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    background-color: #162b58;
+    height: 96px; 
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 92px;
+    margin-top: -8px;
+    margin-right: -8px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    
+}
+ul {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: right;
+    margin-top: -36px;
+    /* background-color:#BFC9CA; */
+    padding: 10px;
+    margin-top: -61px;
+}
+li{
+    display: inline;
+    margin-left: 44px;
+    font-size: 17px;
+}
+li:hover{
+    background-color: #162b58;
+}
+a:link {
+    color: white;
+}
+a:hover {
+font-size:25px;
+color: #ff9800;
+}
+a:active {
+    color:  #ff9800;
+}
+img {
+    border-radius: 70px;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img:hover{
+    transform: rotateY(130deg);
+    transition: 350ms;  
+}
+#aboutDevelopres{
+    width: 1298px;
+    height: 1321px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+ b{
+    font-size: 30px;
+    color: white;
+}
+#roqaia ,#ahmad {
+    background-color:#BFC9CA;
+    float: left;
+    width: 527px;
+    height:480px;
+    padding: 30px;
+    margin-bottom: 70px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #162b58 ;
+    box-shadow: 10px 10px 5px grey;
+    transition: 350ms;
+    
+}
+#yahya , #rania {
+    background-color: #BFC9CA;
+    float: right;
+    width: 527px;
+    height:480px;
+    padding: 30px;
+    margin-bottom: 70px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #162b58 ;
+    box-shadow: 10px 10px 5px grey;
+    transition: 350ms;
+
+}
+#ahmad:hover ,#yahya:hover , #rania:hover , #daoud:hover{
+
+width: 580px;
+height:490px;
+font-size: 30px;
+background-color: #85929E; 
+
+}
+#roqaia:hover{
+    width: 580px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: #85929E; 
+}
+#daoud {
+    background-color: #BFC9CA;
+    color: #162b58 ;
+    width: 527px;
+    height:480px;
+    margin-top: 1241px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 10px 10px 5px grey;
+    transition: 350ms;
+    
+}
+#aboutApp {
+    background-image: url(../img/background.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 550px;
+    width: 1298px;
+    height: 490px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #162b58 ;
+    box-shadow: 10px 10px 5px grey;
+    line-height: 1.8;
+    transition: 350ms;
+   
+}
+
+footer{
+    height: 96px;
+    width: 100%;
+    background-color:#162b58 ;
+    margin: 30px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 72px;
+  padding-left:46px;
+  margin-bottom: -11px;
+  margin-left: -13px;
+}
+#icons{
+    float: right;
+    height: 93px;
+    margin-right: 72px;
+   
+    margin-top: -30px;
+}
+
+  
+
