@@ -4,76 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <title>About-us</title>
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
     <link rel="reset" href="css/reset.css">
 </head>
 
 <body>
     <header>
-        <h1>
-            Logo
-        </h1>
+        <div>
+            <img src="img/logo-2-e.png" height="50px">
+        </div>
         <nav>
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href="index.html">HOME</a>
                 </li>
                 <li>
-                    <a href="">Game</a>
+                    <a href="js/questions.js"> PLAY</a>
                 </li>
                 <li>
-                    <a href="">Journal</a>
+                    JOURNAL
                 </li>
-                <li>
-                    <a href="">login</a>
-                </li>
-                <li>
-                    <a href="aboutUs.html">About us</a>
+                <li><a href="aboutUs.html">ABOUT US</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
+        <div id = "teamMembers">
+            TEAM MEMBERS
+        </div>
         <div id="aboutDevelopres">
             <div>
-                <p id="roqaia"><b>Roukia Salahi</b><br><br>
-                    I'm Roukia, Syrian currently living in Jordan. I have a bachelor degree in civil engineering and now
-                    I am taking courses in software development by ASAC.<br><br>
-                    <img src="img/roqaia.jpg">
-                </p>
-                <p id="yahya"><b>Yahya AbuKhaleel</b><br><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam provident consectetur ullam
-                    praesentium dolor doloribus architecto harum? Tempore quas, <br><br>
-                    <img src="img/yahya.PNG">
-                </p>
 
 
+                <div id="firstDeveloper">
+                    <img class=" profileImg" id="roqaiaImg" src="img/roqaia.jpg" title="roqaia salahi">
+                    <p class="bio" id="roqaiaText"><b>Roukia Salahi</b><br><br>
+                        I'm Roukia, Syrian currently living in Jordan. I have a bachelor degree in civil engineering and
+                        now
+                        I am taking courses in software development by ASAC.<br><br>
+                    </p>
+                </div>
+                <div id="secDeveloper">
+                    <img class=" profileImg" id="yahyaImg" src="img/yahya.PNG" title="yahya abukhaleel">
+                    <p class="bio" id="yahyaText"><b>Yahya AbuKhaleel</b><br><br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam provident consectetur ullam
+                        praesentium dolor doloribus architecto harum? Tempore quas, <br><br>
 
-            </div>
-            <div>
-                <p id="ahmad"><b>Ahmad Alhrthani</b><br><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam provident consectetur ullam
-                    praesentium dolor doloribus architecto harum? Tempore quas,<br><br>
-                    <img src="img/ahmad.PNG">
-                </p>
-                <p id="rania"><b>Rania qatawneh</b><br><br>
-                    Rania from Jordan-20 years old, bachelor in physics, currently a student at ASAC to learn
-                    programming.<br><br>
-                    <img src="img/rania.PNG">
-                </p>
+                    </p>
+                </div>
 
             </div>
             <div>
-                <p id="daoud"><b>Daoud Nazek</b><br><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam provident consectetur ullam
-                    praesentium dolor doloribus architecto harum? Tempore quas,<br><br>
-                    <img src="img/daoud.PNG">
+                <div id="thiredDeveloper">
+                    <img class=" profileImg" id="daoudImg" src="img/daoud.PNG" title="daoud nazek">
+                    <p class="bio" id="daoudText"><b>Daoud Nazek</b><br><br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam provident consectetur ullam
+                        praesentium dolor doloribus architecto harum? Tempore quas,<br><br>
+
+                    </p>
+                </div>
+                <div id="fourthDeveloper">
+                    <img class=" profileImg" id="raniaImg" src="img/rania.PNG" title="rania qatawneh">
+                    <p class="bio" id="raniaText"><b>Rania Qatawneh</b><br><br>
+
+                        Rania from Jordan-20 years old, bachelor in physics, currently a student at ASAC to learn
+                        programming.<br><br>
+
+
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div id="fifthDeveloper">
+                <img class=" profileImg" id="ahmadImg" src="img/ahmad.PNG" title="Ahmad Alhrthani">
+                <p class="bio" id="ahmadText"><b>Ahmad Alhrthani</b><br><br>
+                    My name is Ahmad Alherthani.
+                    I have got a BSC in Computer Science and now I am doing my master's degree in the same field at the
+                    Islamic university of Gaza.
+                    During my masters degree courses period, I won a mobility scholarship to the technical university of
+                    Vienna in 2019 to study datastewardship course.
+                    This scholarship gave me the opportunity to have an outlook at computer science in European Union,
+                    specifically in Austria and Germany.
+                    As for my practical experience I worked as a freelance IT specialist for 10 years. I have a good
+                    experience in web development using HTML,CSS and JavaScript <br><br>
+
                 </p>
             </div>
+
         </div>
 
         <div id="aboutApp">
-            <img src="img/play.jpg">
+            <img id ="playImg"src="img/play.jpg">
             <p>
                 <i>Interactive Learning Experience</i> <br>
                 play & learn is an edtech proof of concept to capture student attention and study their curriculum along
@@ -83,18 +107,18 @@
             </p>
         </div>
 
-        <div id="contact">
 
-        </div>
 
     </main>
     <footer>
-        all copy rights reserved to &copy;2020 Play&Learn
-
-        <img id="icons" src="img/icons.png">
-
+        <div id="copyRight">
+            &copy; LTUC
+        </div>
+        <div>
+            <img id="icons" src="img/icons.png" height="50px">
+        </div>
     </footer>
-    <script src="about.js"></script>
+    <script src="js/about.js"></script>
 </body>
 
 </html>
