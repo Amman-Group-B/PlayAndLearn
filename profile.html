@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/indexStyle.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/flashCards.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+  <title>Welcome</title>
+</head>
+<body>
+  <header>
+    <div>
+        <img src="img/logo-2-e.png" height="50px">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="addQuestion.html"> Add Questions</a></li>
+            <li><a href="profile.html"> Profile</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+  <section>
+    <form id="journalForm">
+      <fieldset>
+        <legend>My daily journal</legend>
+        <div>
+          <label id="dateTitle"for="fname">Today: </label>
+          <input type="text" placeholder="Today, I have learned" name="journalTitle" id="journalTitle">
+          <input type="submit">
+        </div>
+        <textarea name="Text1" wrap="off" placeholder="Remember, be honest." cols="35" rows="8"></textarea>
+      </fieldset>
+    </form>
+
+    <aside>
+      <div id="controls">
+        <p>Click card to flip.</p>
+        <i id="next" class="fa fa-caret-square-o-right fa-3" aria-hidden="true"></i>
+      </div>
+      <div id="cards" class="scene scene--card">
+        <div id="origin" class="card">
+          <div class="card__face card__face--front">front</div>
+          <div class="card__face card__face--back">back</div>
+        </div>
+      </div>
+    </aside>
+</section>
+<section id="pastJournals">
+  
+</section>
+</main>
+
+<footer>
+  <div id="copyRight">
+      &copy; LTUC 
+  </div>
+  <div>
+      <img src="img/icons.png" height="50px">
+  </div>
+</footer>
+<script src="js/flashCards.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+</html>

@@ -37,6 +37,7 @@ main {
   transform-style: preserve-3d;
   transition: all 300ms ease-in;
 
+  box-shadow: 8px 1px 5px 0px rgba(117, 117, 117, 1);
   -webkit-box-reflect: below 0
   -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), to(white)); 
 }
