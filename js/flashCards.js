@@ -25,7 +25,9 @@ function registerEvents() {
 
 };
 registerEvents();
-
+window.setInterval(function(){
+  randomCard()
+}, 10000);
 var uniqueId = 0
 function randomCard() {
   flashCardArea.innerHTML = '';

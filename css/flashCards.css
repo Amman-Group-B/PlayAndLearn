@@ -3,8 +3,8 @@ body {
 }
 
 .scene {
-  width: 200px;
-  height: 260px;
+  width: 300px;
+  height: 400px;
   margin: 0 auto;
   perspective: 600px;
 }
@@ -17,7 +17,6 @@ body {
   cursor: pointer;
   position: relative;
   box-shadow: 8px 1px 5px 0px rgba(117, 117, 117, 1);
-  margin: 10px;
 }
 
 .card__face {
@@ -47,4 +46,14 @@ body {
 /* this style is applied when the card is clicked */
 .flipme {
   transform: rotateY(180deg);
+}
+
+#controls {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+#controls > i {
+  font-size: 4em;
+  margin-top: 10px;
 }
