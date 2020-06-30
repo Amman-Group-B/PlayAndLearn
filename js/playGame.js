@@ -23,32 +23,32 @@ var questionQuantity;
 var randomQuestionIndex;
 var questionsBank = [];
 var categoryIndex;
-var questionsSourceArray=[];
-var shownQuestions=[];
+var questionsSourceArray = [];
+var shownQuestions = [];
 // var mathQuestions = [];
 // var arabicQuestions = [];
 // var generalQuestions = [];
 // var englishQuestions = [];
-questionsSourceArray=mathQuestions;
-console.log('questionsSourceArray: ',questionsSourceArray);
-console.log('mathQuestions: ',mathQuestions);
+questionsSourceArray = mathQuestions;
+console.log('questionsSourceArray: ', questionsSourceArray);
+console.log('mathQuestions: ', mathQuestions);
 // render a question
 function renderQuestion() {
-    console.log('shownQuestions: ',shownQuestions);
+    console.log('shownQuestions: ', shownQuestions);
 
     randomQuestionIndex = Math.floor(Math.random() * questionsSourceArray.length);
 
-    while(shownQuestions.includes(randomQuestionIndex) ){
+    while (shownQuestions.includes(randomQuestionIndex)) {
         console.log('this is question has been shown ');
         randomQuestionIndex = Math.floor(Math.random() * questionsSourceArray.length);
 
     }
-   
+
 
     var q = questionsSourceArray[randomQuestionIndex];
     console.log('questionsSourceArray: ', questionsSourceArray);
     console.log('q: ', q);
-    question= document.getElementById("question");
+    question = document.getElementById("question");
     question.innerHTML = "<p>" + q.question + "</p>";
     qImg.innerHTML = "<img src=" + q.imgSrc + ">";
     choiceA.innerHTML = q.choiceA;
@@ -64,16 +64,16 @@ var englishImage = document.getElementById('english');
 
 var coverFlow = document.getElementById('coverflow');
 
-mathImage.addEventListener('click', function(){
+mathImage.addEventListener('click', function () {
     chooseCategory('Math')
 })
-generalImage.addEventListener('click', function(){
+generalImage.addEventListener('click', function () {
     chooseCategory('General')
 })
-arabicImage.addEventListener('click', function(){
+arabicImage.addEventListener('click', function () {
     chooseCategory('Arabic')
 })
-englishImage.addEventListener('click', function(){
+englishImage.addEventListener('click', function () {
     chooseCategory('English');
 })
 
@@ -81,21 +81,21 @@ englishImage.addEventListener('click', function(){
 function chooseCategory(categ) {
 
     var range = document.getElementById("myRange").value;
-    console.log('range: ',range)
+    console.log('range: ', range)
     var quantity = 0;
     if (range <= 25) {
         quantity = 2;
-        } else if (range <= 50) {
-            quantity = 4;
-        } else if (range <= 75) {
-            quantity = 8;
-        } else if (range < 100) {
-            quantity = 10;
-        } else if (range == 100) {
-            quantity = 15;            // implement all later !!!!!!!!!!
-        }
-    
-    questionQuantity = quantity-1;
+    } else if (range <= 50) {
+        quantity = 4;
+    } else if (range <= 75) {
+        quantity = 8;
+    } else if (range < 100) {
+        quantity = 10;
+    } else if (range == 100) {
+        quantity = 15;            // implement all later !!!!!!!!!!
+    }
+
+    questionQuantity = quantity - 1;
 
     coverFlow.style.display = 'none'
 
@@ -109,10 +109,10 @@ function chooseCategory(categ) {
         questionsSourceArray = JSON.parse(localStorage.getItem('mathQuestions'));
     } else if (questionCategory == 'General') {
         questionsSourceArray = JSON.parse(localStorage.getItem('generalQuestions'));
-    }else if (questionCategory == 'Arabic') {
+    } else if (questionCategory == 'Arabic') {
         //questionsSourceArray = arabicQuestions.slice();
         questionsSourceArray = JSON.parse(localStorage.getItem('arabicQuestions'));
-    }else if (questionCategory == 'English') {
+    } else if (questionCategory == 'English') {
         //questionsSourceArray = englishQuestions.slice();
         questionsSourceArray = JSON.parse(localStorage.getItem('englishQuestions'));
     }
@@ -127,11 +127,11 @@ function startQuiz() {
 }
 // render progress
 function renderProgress() {
-    console.log('questionQuantity before if:',questionQuantity);
-    if(questionQuantity>questionsSourceArray.length){
-        questionQuantity=questionsSourceArray.length-1;
+    console.log('questionQuantity before if:', questionQuantity);
+    if (questionQuantity > questionsSourceArray.length) {
+        questionQuantity = questionsSourceArray.length - 1;
     }
-    console.log('questionQuantity after if:',questionQuantity);
+    console.log('questionQuantity after if:', questionQuantity);
 
     for (var qIndex = 0; qIndex <= questionQuantity; qIndex++) {
         progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
@@ -216,6 +216,25 @@ function addQuestion() {
     var choiceB = document.getElementById('choiceB').value;
     var choiceC = document.getElementById('choiceC').value;
     var correctAnswer = document.getElementById('correctAnswer').value;
-    new Question(question,imgSrc,choiceA,choiceB,choiceC,correctAnswer);
+    new Question(question, imgSrc, choiceA, choiceB, choiceC, correctAnswer);
 }
-    //console.log('questions[0]: ', questions[0]);
+//console.log('questions[0]: ', questions[0]);
+
+var welcomeImage = document.getElementById("welcomeImage");
+var welcome = document.getElementById("welcome");
+
+
+welcomeImage.addEventListener('click', welcomeDisplay);
+
+function welcomeDisplay(event) {
+    event.preventDefault();
+    welcomeImage.classList.add('member');
+    welcomeImage.classList.add('imgDiv');
+
+    setTimeout(displayNone, 3000);
+
+}
+
+function displayNone() {
+    welcome.style.display = "none";
+}
