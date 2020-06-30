@@ -13,6 +13,12 @@ header,footer{
   /* position: relative; */
     background-color:#FDFFFC;
 }
+header {
+    margin-bottom: 20px;
+}
+footer {
+    margin-top: 20px;
+}
 header div{
     position: relative;;
 }
@@ -154,64 +160,77 @@ img:nth-child(2){
 }
 @keyframes submit{
     0%{
-        height: 60px;
+        height: 20px;
         /* rotate: 30deg; */
         transform: rotate(0deg);
 
     }
     50%{
-        height: 90px;
+        height: 40px;
         transform: rotate(60deg);
     }
     100%{
-        height:120px ;
+        height:60px ;
         transform: rotate(100deg);
     }
 
 }
-input[type=text] ,#category {
-    background-color: white;
-    color: #011672 ;
-    font-family: 'Pangolin', cursive;
-    
-   
-    
-  }
-  input[type=submit] ,  input[type=button]  {
-    background-color: #011672 ;
-    border: none;
-    color: #e8ff7fe6;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    margin: 9px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transition:width 0.4s ease-in-out;
-  }
-  input[type=submit]:hover ,  input[type=button]:hover{
-    background-color: #404d86;
-  }
-  input[type=text]:focus {
-    border: 3px solid #555;
-     width: 100%;
-  }
-  fieldset{
-    position: relative;
-    z-index: 0%;
-    width: 60px;
-    margin-top: 50px;
-    margin-bottom: 8%;
-    left: 40%;
-    right: 35%;
-    text-align: center;
-    padding: 60px;
-    display: inline-block;
-    background-color: #e8ff7fe6;
-    border-radius: 55px;
+
+
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
+.contact-us {
+    background: #f8f4e5;
+    border: 2px solid black;
+    box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+    padding: 20px;
+
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    font-size: 14pt;
+    line-height: 6pt;
+    font-family: "Fjalla One";
+    margin-bottom: 6pt;
+    border: none;
+    border-bottom: 5px solid black;
+    background: #f8f4e5;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: black;
+  }
+  
+  input:focus {
+    border-bottom: 5px solid #ffa580;
+  }
+  
+  input[type=submit] ,  input[type=button] {
+    display: block;
+    margin: 0 auto;
+    line-height: 28pt;
+    padding: 0 20px;
+    background: #ffa580;
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px black;
+  }
+  input[type=submit]:hover ,  input[type=button]:hover {
+    background: black;
+    color: white;
+    border: 1px solid black;
+  }
+  
+  ::selection {
+    background: #ffc8ff;
+  }
 fieldset button{
     background-color: #b7daeb;
 }
@@ -220,7 +239,3 @@ label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
 }
-
-
-  
-  
