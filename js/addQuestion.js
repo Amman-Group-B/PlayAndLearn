@@ -1,8 +1,8 @@
 'use strict';
-var img = document.getElementById("img");
-img.style.display = "none";
-var addQuestionButton = document.getElementById('addQuestionButton');
-addQuestionButton.addEventListener("click", addQuestion);
+// var img = document.getElementById("img");
+// img.style.display = "none";
+// var addQuestionButton = document.getElementById('addQuestionButton');
+// addQuestionButton.addEventListener("click", addQuestion);
 
 // var numberOfQuestions = document.getElementById('numberOfQuestions').value; 
 
@@ -30,13 +30,13 @@ function addQuestion() {
 
 console.log(localStorage);
 
-addQuestionButton.addEventListener("mouseover", addPlus);
+// addQuestionButton.addEventListener("mouseover", addPlus);
 
-function addPlus(){
-    document.getElementById("img").style.display = "block"; 
-}
-addQuestionButton.addEventListener("mouseout", removePlus);
-function removePlus(){
-    document.getElementById("img").style.display ="none";
-}
+// function addPlus(){
+//     document.getElementById("img").style.display = "block"; 
+// }
+// addQuestionButton.addEventListener("mouseout", removePlus);
+// function removePlus(){
+//     document.getElementById("img").style.display ="none";
+// }
 
