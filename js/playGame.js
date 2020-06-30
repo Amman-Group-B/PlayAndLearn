@@ -20,11 +20,11 @@ var gaugeUnit = gaugeWidth / questionTime;
 var TIMER;
 var score = 0;
 var questionQuantity;
-var randomIndex;
 var randomQuestionIndex;
 var questionsBank = [];
 var categoryIndex;
 var questionsSourceArray=[];
+var shownQuestions=[];
 // var mathQuestions = [];
 // var arabicQuestions = [];
 // var generalQuestions = [];
@@ -34,7 +34,17 @@ console.log('questionsSourceArray: ',questionsSourceArray);
 console.log('mathQuestions: ',mathQuestions);
 // render a question
 function renderQuestion() {
+    console.log('shownQuestions: ',shownQuestions);
+
     randomQuestionIndex = Math.floor(Math.random() * questionsSourceArray.length);
+
+    while(shownQuestions.includes(randomQuestionIndex) ){
+        console.log('this is question has been shown ');
+        randomQuestionIndex = Math.floor(Math.random() * questionsSourceArray.length);
+
+    }
+   
+
     var q = questionsSourceArray[randomQuestionIndex];
     console.log('questionsSourceArray: ', questionsSourceArray);
     console.log('q: ', q);
@@ -44,6 +54,7 @@ function renderQuestion() {
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
+    shownQuestions.push(randomQuestionIndex);
 }
 // start.addEventListener("click", chooseCategory);
 var mathImage = document.getElementById('math');
@@ -84,7 +95,7 @@ function chooseCategory(categ) {
             quantity = 15;            // implement all later !!!!!!!!!!
         }
     
-    questionQuantity = quantity;
+    questionQuantity = quantity-1;
 
     coverFlow.style.display = 'none'
 
@@ -116,6 +127,12 @@ function startQuiz() {
 }
 // render progress
 function renderProgress() {
+    console.log('questionQuantity before if:',questionQuantity);
+    if(questionQuantity>questionsSourceArray.length){
+        questionQuantity=questionsSourceArray.length-1;
+    }
+    console.log('questionQuantity after if:',questionQuantity);
+
     for (var qIndex = 0; qIndex <= questionQuantity; qIndex++) {
         progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
     }
