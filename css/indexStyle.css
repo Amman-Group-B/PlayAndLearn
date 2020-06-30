@@ -212,6 +212,86 @@ footer #copyRight{
     top:15px;
 }
 
+path{
+    padding:0px;
+    bottom: 0px;
+    display: inline-block;
+    fill:#000b76;
+    height: 200px;
+    width: 300px;
+    animation:pathChange reverse infinite 8s;
+}
+@keyframes pathChange{
+    
+    0%{
+        fill:#000b76;
+    }
+    15%{
+        fill: #5335d6;
+    }
+    25%{
+        fill:#8e23e6 ;
+    }
+    35%{
+        fill:#c934c9 ;
+    }
+    45%{
+        fill:#e623bc ;
+    }
+    55%{
+        fill:#e62323 ;
+    }
+    65%{
+        fill:#df3737 ;
+    }
+    75%{
+        fill:#f38e0a ;
+    }
+    85%{
+        fill:#e62323 ;;
+    }
+    95%{
+        fill:#8e23e6 ;
+    }
+    100%{
+        fill: #5335d6;
+    }
+}
+
+/* .inner {
+    float: left;
+    display: inline-block;
+    background: rgb(9, 201, 153);
+    padding: 1em;
+    border-radius: 10px;
+    width: 180px;
+    clip-path: circle(8% at 12% 30%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+} */
+    /* .inner:hover {
+        clip-path: circle(75%);
+        background: #00B6FF;
+    }
+
+    p a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    span {
+        float: left;
+        color: white;
+        font-weight: bold;
+        transition: color .2s;
+        position: relative;
+        margin-right: 4%;
+    }
+    :hover span {
+       
+        color: rgba(206, 44, 44, 0)
+    } */
+
 
 
 
