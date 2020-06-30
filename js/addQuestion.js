@@ -1,5 +1,6 @@
 'use strict';
-
+var img = document.getElementById("img");
+img.style.display = "none";
 var addQuestionButton = document.getElementById('addQuestionButton');
 addQuestionButton.addEventListener("click", addQuestion);
 
@@ -20,8 +21,22 @@ function addQuestion() {
     var correctAnswer = document.getElementById('correctAnswer').value;
 
     new Question(category, imgSrc, question, choiceA, choiceB, choiceC, correctAnswer);
+   
+   
     location.reload();
     }
- 
+  
+   
 
 console.log(localStorage);
+
+addQuestionButton.addEventListener("mouseover", addPlus);
+
+function addPlus(){
+    document.getElementById("img").style.display = "block"; 
+}
+addQuestionButton.addEventListener("mouseout", removePlus);
+function removePlus(){
+    document.getElementById("img").style.display ="none";
+}
+
