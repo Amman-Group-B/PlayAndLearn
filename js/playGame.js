@@ -231,7 +231,7 @@ function welcomeDisplay(event) {
     welcomeImage.classList.add('member');
     welcomeImage.classList.add('imgDiv');
 
-    setTimeout(displayNone, 3000);
+    setTimeout(displayNone, 1500);
 
 }
 

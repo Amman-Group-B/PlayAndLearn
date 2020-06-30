@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+    background: #DCF5FF;
+    align-items: center;
+}
+
+header,footer{
+    font-family: 'Pangolin', cursive;
+    text-decoration: none;
+    width: 100%;
+    height: 60px;
+  /* position: relative; */
+    background-color:#FDFFFC;
+}
+header {
+    margin-bottom: 20px;
+}
+footer {
+    margin-top: 20px;
+}
+header div{
+    position: relative;;
+}
+header img{
+    position: absolute;
+    left: 20px;
+    margin: 0px;
+    top:5px;
+}
+
+header ul{
+position: absolute;
+left: 60%;
+padding:0px 5px 0px 5px;
+}
+header ul li{
+  bottom: 20px;
+  left: 60%;
+  color:#011672;
+    padding: 0px;
+    margin:5px 0px 5px 0px;
+   height: 30px;
+   width: 100px;
+   text-align: center;
+    padding:6px;
+    margin: 0px;
+    display: inline-block;
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color:#011672;
+
+}
+header ul :hover{
+    background-color:#011672 ;
+    color:#FDFFFC ;
+}
+
+footer {
+    text-align: center;
+    padding-top:14px;
+}
+footer img{
+    float: right;
+}
+
+#img img:nth-child(1){
+    position: absolute;
+    left: 0%;
+    top:30%;
+    animation:submit 1s infinite alternate-reverse;
+    
+}
+ img:nth-child(2){
+    position: absolute;
+    left: 20%;
+    top:50%;
+    animation:submit 1s infinite alternate-reverse;
+    
+}
+img:nth-child(3){
+    position: absolute;
+    left: 5%;
+    top:70%;
+    animation:submit 1s infinite alternate-reverse;
+    
+}
+img:nth-child(4){
+    position: absolute;
+    left: 750%;
+    top:50%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(5){
+    position: absolute;
+    left: 35%;
+    top:80%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(6){
+    position: absolute;
+    left: 70%;
+    top:10%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(7){
+    position: absolute;
+    left: 80%;
+    top:90%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(8){
+    position: absolute;
+    left: 15%;
+    top:60%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(9){
+    position: absolute;
+    left: 65%;
+    top:40%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(10){
+    position: absolute;
+    left: 80%;
+    top:90%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(11){
+    position: absolute;
+    left: 50%;
+    top:90%;
+    animation:submit 1s infinite alternate-reverse;
+}img:nth-child(12){
+    position: absolute;
+    left: 10%;
+    top:12%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(13){
+    position: absolute;
+    left: 90%;
+    top:40%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(2){
+    position: absolute;
+    left: 20%;
+    top:30%;
+    animation:submit 1s infinite alternate-reverse;
+}
+img:nth-child(2){
+    position: absolute;
+    left: 20%;
+    top:30%;
+    animation:submit 1s infinite alternate-reverse;
+}
+@keyframes submit{
+    0%{
+        height: 20px;
+        /* rotate: 30deg; */
+        transform: rotate(0deg);
+
+    }
+    50%{
+        height: 40px;
+        transform: rotate(60deg);
+    }
+    100%{
+        height:60px ;
+        transform: rotate(100deg);
+    }
+
+}
+
+
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.contact-us {
+    background: #f8f4e5;
+    border: 2px solid black;
+    box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+    padding: 20px;
+
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    font-size: 14pt;
+    line-height: 6pt;
+    font-family: "Fjalla One";
+    margin-bottom: 6pt;
+    border: none;
+    border-bottom: 5px solid black;
+    background: #f8f4e5;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: black;
+  }
+  
+  input:focus {
+    border-bottom: 5px solid #ffa580;
+  }
+  
+  input[type=submit] ,  input[type=button] {
+    display: block;
+    margin: 0 auto;
+    line-height: 28pt;
+    padding: 0 20px;
+    background: #ffa580;
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px black;
+  }
+  input[type=submit]:hover ,  input[type=button]:hover {
+    background: black;
+    color: white;
+    border: 1px solid black;
+  }
+  
+  ::selection {
+    background: #ffc8ff;
+  }
+fieldset button{
+    background-color: #b7daeb;
+}
+label{
+ 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+}
