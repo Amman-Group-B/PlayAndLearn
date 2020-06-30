@@ -66,86 +66,31 @@ footer img{
     float: right;
 }
 
-
 #aboutDevelopres img {
     border-radius: 130px;
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
+.developers {
+    margin-top: 3%;
+    margin-left: 1%;
+    margin-right: 2%;
+    display: inline-block;
+    width: 16%;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Pangolin', cursive;
+    font-family: 'Pangolin', cursive;
+    color:#011672;
+}
 b{
     font-size: 30px;
     color:#eda92c;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-}
-.bio{
-    font-size: 25px;
-    font-family: 'Pangolin', cursive;
-    color:#011672;
-    text-align: center;
-   
-}
-#teamMembers{
-    font-family: 'Pangolin', cursive;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 48px;
-    margin-bottom: -6px;
-    color: #162b58 ;
-   
-}
-#teamMembers:hover{
-    color:#eda92c;
-    transition: 350ms;
-}
-
-.profileImg {
-    display: inline;
-}
-#firstDeveloper , #secDeveloper , #thiredDeveloper {
-    width: 400px;
-    height: 511px;
-    float: left;
-    margin: 20px;
-    font-size: 24px;
-    text-align: center; 
-    padding: 7px;
-    margin-left: 76px;
-}
-#fourthDeveloper {
-    width: 500px;
-    height: 537px;
-    padding: 7px;
-    float: left;
-    font-size: 24px;
-    text-align: center;
-    padding: 7px;
-    margin-left: 165px;
-}
-#fifthDeveloper{
-    width: 500px;
-    height: 537px;
-    padding: 7px;
-    float: left;
-    margin: 20px;
-    font-size: 24px;
-    text-align: center;
-    padding: 7px;
-}
-#firstDeveloper:hover ,#secDeveloper:hover, #thiredDeveloper:hover, #fourthDeveloper:hover,#fifthDeveloper:hover{
-    background-image: linear-gradient(to right, #40a6d4, #DCF5FF);
-    box-shadow: 10px 10px 5px grey;
-}
-#secDeveloper {
-    float: left;
-    margin-left: 26px;
-}
-#fourthDeveloper{
-    margin-left: 210px;
 }
 #aboutApp {
     width: 1298px;
@@ -160,7 +105,7 @@ b{
     box-shadow: 10px 10px 5px grey;
     line-height: 1.8;
     transition: 350ms;
-    margin-top: 1225px;
+    margin-top: 80px;
     background-image: url(../img/background.gif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -172,4 +117,16 @@ b{
     height:250px;
   
 }
-
+#teamMembers{
+    font-family: 'Pangolin', cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: -6px;
+    color: #162b58 ;
+   
+}
+#teamMembers:hover{
+    color:#eda92c;
+    transition: 350ms;
+}
