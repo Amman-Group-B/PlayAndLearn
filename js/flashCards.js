@@ -1,6 +1,8 @@
 var card = document.getElementById('origin');
 console.log(card)
 card.addEventListener('click',flipMe)
+var timer = 10000;
+var timeout;
 
 function flipMe(event) {
 
@@ -22,14 +24,16 @@ function registerEvents() {
   var nextClick = document.getElementById('next');
 
   nextClick.addEventListener('click', randomCard);
-
 };
+
 registerEvents();
-window.setInterval(function(){
-  randomCard()
-}, 10000);
-var uniqueId = 0
+
+var uniqueId = 0;
+
 function randomCard() {
+  clearTimeout(timeout);         // clears timeout to allow users to study when flipping to avoid accidental flip
+  timeout = window.setInterval(function(){randomCard()}, timer);
+
   flashCardArea.innerHTML = '';
 
   var i = Math.floor(Math.random()*questionBank.length);
@@ -58,8 +62,8 @@ function randomCard() {
   cardHolder.appendChild(backCard);
   
   var card2 = document.getElementById(uniqueId);
-  card2.addEventListener('click',flipMe)
-
+  card2.addEventListener('click',flipMe);
+  card2.classList.add('animate')
   console.log(questionBank[i][j])
 }
 

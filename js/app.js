@@ -1,6 +1,6 @@
 //import { mathQuestions, generalQuestions } from 'questions.js';
 // select all elements
-var start = document.getElementById("start");
+// var start = document.getElementById("start");
 var quiz = document.getElementById("quiz");
 var question;
 var qImg = document.getElementById("qImg");
@@ -66,7 +66,7 @@ function renderQuestion() {
     choiceC.innerHTML = q.choiceC;
 }
 
-start.addEventListener("click", chooseCategory);
+// start.addEventListener("click", chooseCategory);
 
 // start quiz
 function chooseCategory() {

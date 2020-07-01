@@ -8,34 +8,46 @@
   <link rel="stylesheet" href="css/indexStyle.css">
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/flashCards.css">
+  <link rel="stylesheet" href="css/login.css">
+
   <title>Welcome</title>
 </head>
 <body>
-  <header>
+<header>
     <div>
-        <img src="img/logoAnimated.gif" height="50px">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="addQuestion.html"> Add Questions</a></li>
-            <li><a href="profile.html"> Profile</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-        </ul>
-    </nav>
+      <img src="img/logoAnimated.gif">
+  </div>
+  <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="addQuestion.html"> Add Questions</a></li>
+          <li>
+              <i class="fa fa-address-card" aria-hidden="true"></i>
+              <a href="profile.html"> Profile</a>
+          </li>
+          <li><a href="aboutUs.html">About Us</a></li>
+      </ul>
+  </nav>
 </header>
 
 <main>
   <section>
+    <aside id="profile">
+      <div id="profImg">
+        <img src="img/avatars/avatar-default.png">
+      </div>
+      <article id="basicInformation">
+
+      </article>
+    </aside>
+
     <form id="journalForm">
       <fieldset>
         <legend>My daily journal</legend>
-        <div>
-          <label id="dateTitle"for="fname">Today: </label>
-          <input type="text" placeholder="Today, I have learned" name="journalTitle" id="journalTitle">
-          <input type="submit">
-        </div>
-        <textarea name="Text1" wrap="off" placeholder="Remember, be honest." cols="35" rows="8"></textarea>
+        <label id="dateTitle"for="fname">Today: </label>
+        <textarea id="textarea" name="Text1" maxlength="75" placeholder="Remember, be honest." cols="20" rows="5"></textarea>
+        <p id="textCount">Characters left: 75</p>
+        <input type="submit">
       </fieldset>
     </form>
 
@@ -53,8 +65,53 @@
     </aside>
 </section>
 <section id="pastJournals">
-  
+  <div id='frame'>
+    <a class="note sticky1">
+        <div class='pin'></div>
+        <div class='text'><p>Today</p>wdadawdakawj nfekefkkee kfkefkefka  kfeakef akekfeakjef akekfeakjef kfeakef</div>
+    </a>
+    
+    </div>
 </section>
+
+
+<div id="slide">
+  <div class="bar">
+  <a class="active" href="#" onclick="toggleLoginModal()"><i class="fa fa-sign-in"></i></a>
+  <a href="#" id="scoreBtn" class="disabled"><i class="fa fa-star-half-o"></i></a>
+  </div>
+
+  <div id="loginModal" class="modal modal_move">
+      <div class="modal-content">
+          <form id="login">
+              <div class="imgcontainer">
+                  <img id="avatarDefault" src="img/avatars/avatar-default.png" alt="Avatar" class="avatar">
+              </div>
+
+              <div class="container">
+                  <label for="uname"><p>Username</p><span id="loginResult"></span></label>
+                  <input type="text" placeholder="Enter Your Username" id="uname" required>
+              
+                  <!-- <label for="avatarUpload"><b>Image Avatar</b></label>
+                  <input type="file" id="avatarUpload" name="avatarUpload" accept="image/png, image/jpeg">
+               -->
+                  <button type="submit">Login</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  <div id="infoModal" class="modal modal_move">
+      <div class="modal-content">
+              <div class="imgcontainer">
+                  <img id="avatar" src="img/avatars/avatar-default.png" alt="Avatar" class="avatar">
+              </div>
+              <div class="container">
+                  <h1 id="name"></h1>
+                  <p id="intro"></p>
+              </div>
+      </div>
+  </div>
+</div>
 </main>
 
 <footer>
@@ -65,8 +122,10 @@
       <img src="img/icons.png" height="50px">
   </div>
 </footer>
-<script src="js/flashCards.js"></script>
 <script src="js/profile.js"></script>
+<script src="js/flashCards.js"></script>
+<script src="js/login.js"></script>
+
 
 </body>
 </html>
