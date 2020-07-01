@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
 
-        <!-- <link rel="stylesheet" href="css/addQuestion.css"> -->
-        <link rel="stylesheet" href="css/questionadd.css">
+    <!-- <link rel="stylesheet" href="css/addQuestion.css"> -->
+    <link rel="stylesheet" href="css/questionadd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <title>Add Questions</title>
 
 </head>
@@ -16,31 +17,34 @@
 <body>
     <header>
         <div>
-            <img src="img/logoAnimated.gif" height="50px">
+            <img src="img/logoAnimated.gif">
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="addQuestion.html"> Add Questions</a></li>
-                <li><a href="profile.html"> Profile</a></li>
+                <li>
+                    <i class="fa fa-address-card" aria-hidden="true"></i>
+                    <a href="profile.html"> Profile</a>
+                </li>
                 <li><a href="aboutUs.html">About Us</a></li>
             </ul>
         </nav>
     </header>
     <div id="img">
         <img src="img/add.png" alt="" height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-        <img src="img/add.png" alt=""height="80px">
-    
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+        <img src="img/add.png" alt="" height="80px">
+
     </div>
 
     <div class="contact-us">
@@ -53,24 +57,28 @@
                     <option>Arabic</option>
                     <option>English</option>
                 </select><br>
-                
-                <label for="question">Question Text</label>
-                <input type="text" id="question" required><br>
+                <div id="label1">
+                    <label for="question">Question Text</label>
+                    <input type="text" id="question" required><br>
+                </div>
+                <div id="label2">
+                    <label for="imgSrc">Image URL</label>
+                    <input type="text" id="imgSrc" required><br>
+                </div>
+                <div id="label3">
+                    <label for="choiceA">Choice A</label>
+                    <input type="text" id="choiceA" required><br>
 
-                <label for="imgSrc">Image URL</label>
-                <input type="text" id="imgSrc" required><br>
+                    <label for="choiceB">Choice B</label>
+                    <input type="text" id="choiceB" required><br>
 
-                <label for="choiceA">Choice A</label>
-                <input type="text" id="choiceA" required><br>
-
-                <label for="choiceB">Choice B</label>
-                <input type="text" id="choiceB" required><br>
-
-                <label for="choiceC">Choice C</label>
-                <input type="text" id="choiceC" required><br>
-
-                <label for="correctAnswer">Right Answer Choice</label>
-                <input type="text" id="correctAnswer" maxlength="1" max="C" placeholder="A,B,C" required><br>
+                    <label for="choiceC">Choice C</label>
+                    <input type="text" id="choiceC" required><br>
+                </div>
+                <div id="correct">
+                    <label for="correctAnswer">Right Answer Choice</label>
+                    <input type="text" id="correctAnswer" maxlength="1" max="C" placeholder="A,B,C" required><br>
+                </div>
                 <input id="addQuestionButton" type="submit" value="Add Question"><br>
                 <input type="button" value="Go To Quiz" onclick="location.href ='playGame.html'">
             </fieldset>
@@ -78,12 +86,17 @@
     </div>
 
     <footer>
-        &copy; LTUC
-
-        <img id="icons" src="img/icons.png" height="50px">
-
+        <div id="copyRight">
+            &copy; LTUC 
+        </div>
+        <div>
+            <a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
     </footer>
-  
+
 
 
     <script src="js/questions.js"></script>

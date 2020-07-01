@@ -1,3 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+body {
+    background: rgb(100, 201, 223);
+    align-items: center;
+}
+header,footer{
+    font-family: 'Pangolin', cursive;
+    text-decoration: none;
+    width: 100%;
+    height: 70px;
+  /* position: relative; */
+    background-color:#FDFFFC;
+    padding: 12px;
+    border : 2px solid black;
+}
+header div{
+    position: relative;;
+}
+header img{
+    position: absolute;
+    left: 65px;
+    top: 25px;
+    height: 120px;
+}
+
+header ul{
+    position: absolute;
+    left: 47%;
+    padding: 0px 5px 0px 5px;
+    top: 28px;
+    font-size: 25px;
+}
+header ul li{
+  color:#011672;
+   height: 30px;
+   width: 175px;
+   text-align: center;
+    padding:6px;
+    display: inline-block;
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    color:#011672;
+
+}
+header ul :hover{
+    background-color:#011672 ;
+    color:#FDFFFC ;
+}
+
 
 section {
   display: inline-flex;
@@ -107,3 +158,27 @@ div#frame a:nth-child(5n),div#frame div#frame a:last-child {
   transform: rotate(7.5deg);
   background-color: rgba(255, 255, 51, 0.8);
 }
+
+footer {
+  position: relative;
+  text-align: center;
+  bottom: 0;   
+  margin: 0px;
+  height: 35px;
+  }
+  footer div{
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      top:3px;
+  }
+  footer #copyRight{
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      top:15px;
+  }
+  footer .fa {
+      font-size: 3em !important;
+  }
+  

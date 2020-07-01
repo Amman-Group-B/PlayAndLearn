@@ -84,35 +84,3 @@ function removeDaoudText (event){
     event.preventDefault();
     daoudText.style.display ="none";
 }
-
-// var roqaiaText = document.getElementById('roqaiaText');
-// var yahyaText = document.getElementById('yahyaText');
-// var ahmadText = document.getElementById('ahmadText');
-// var raniaText = document.getElementById('raniaText');
-// var daoudText = document.getElementById('daoudText');
-
-// var roqaiaImg = document.getElementById('roqaiaImg');
-// var ahmadImg = document.getElementById('ahmadImg');
-// var daoudImg = document.getElementById('daoudImg');
-// var yahyaImg = document.getElementById('yahyaImg');
-// var raniaImg = document.getElementById('raniaImg');
-
-// var textArray = [roqaiaText, yahyaText, ahmadText, raniaText, daoudText];
-// var imgArray = [roqaiaImg, yahyaImg, ahmadImg, raniaImg, daoudImg];
-// for (i = o; i < textArray.length; i++) {
-//     textArray[i].style.display = 'none';
-// }
-
-// for (i = 0; i < imgArray.length; i++) {
-//     imgArray[i].addEventListener('mouseover', displayText);
-//     function displayText(event) {
-//         event.preventDefault()
-//         textArray[i].style.display = "block";
-//     }
-//     imgArray[i].addEventListener('mouseout', removeText);
-//     function removeText(event) {
-//         event.preventDefault()
-//         textArray[i].style.display = "none";
-
-//     }
-// }
