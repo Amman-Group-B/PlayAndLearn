@@ -176,7 +176,7 @@ header div{
 header img{
     position: absolute;
     left: 65px;
-    top: 25px;
+    top: -15px;
     height: 120px;
     z-index: 1000;
 
