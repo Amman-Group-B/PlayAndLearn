@@ -28,11 +28,12 @@ body {
 }
 
 #addQuestionDiv {
+    margin: auto;
     z-index: 100;
-    width: 520px;
+    width: 41%;
     position: absolute;
     top: 130px;
-    left: 26%;
+    left: 25.5%;
     background: #5EEBB7;
     border: 2px solid #62B3F5;
     box-shadow: 15px 15px 1px #5E87EB, 15px 15px 1px 2px #62B3F5;
@@ -451,6 +452,7 @@ path {
     font-weight: 900;
     font-size: 23px;
     width: 200px;
+    border-radius: 10px;
 }
 
 #buttonDiv {
@@ -464,3 +466,59 @@ img:nth-child(n+2){
     position: absolute;
     animation: submit 1s infinite alternate-reverse;
 }
+
+/* from here */
+
+
+  
+  .category {
+    width: 200px;
+   
+    font-family: "Fjalla One";
+    font-size: 17px;
+    background-color: #5EEBB7;  
+
+
+    position: absolute;
+    top: 8%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .category select {
+    background-color: #0563af;
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .category::before {
+    content: "\f13a";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .category:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .category select option {
+    padding: 30px;
+  }
