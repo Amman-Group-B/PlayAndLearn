@@ -250,28 +250,28 @@ function addQuestion() {
 //console.log('questions[0]: ', questions[0]);
 
 // --------------------------- User updates on score -------------------------------//
-var welcomeImage = document.getElementById("welcomeImage");
-var welcome = document.getElementById("welcome");
+var welcomeGif = document.getElementById("welcomeGif");
+var welcomeDiv = document.getElementById("welcomeDiv");
 var activeUser = JSON.parse(localStorage.getItem('activeUser')) || [];
-if (!activeUser.length == 0) {
-    //displayNone();
-} else {
-    //welcomeImage.addEventListener('click', welcomeDisplay);
+
+     //displayNone();
+
+    welcomeGif.addEventListener('click', welcomeDisplay);
+
+
+
+function welcomeDisplay(event) {
+    event.preventDefault();
+    welcomeGif.classList.add('member');
+    welcomeGif.classList.add('imgDiv');
+
+    setTimeout(displayNone, 1500);
 
 }
 
-// function welcomeDisplay(event) {
-//     event.preventDefault();
-//     welcomeImage.classList.add('member');
-//     welcomeImage.classList.add('imgDiv');
-
-//     setTimeout(displayNone, 1500);
-
-// }
-
-// function displayNone() {
-//     welcome.style.display = "none";
-// }
+function displayNone() {
+    welcomeDiv.style.display = "none";
+}
 
 function updateScore() {
     activeUser[2] += score;
