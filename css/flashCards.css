@@ -57,3 +57,14 @@ body {
   font-size: 4em;
   margin-top: 10px;
 }
+
+.animate{
+  animation:bounce-in 1s ease 0s 1 normal;
+  }
+
+@keyframes bounce-in {
+  0%{ opacity: 0; transform: scale(.3); }
+  50%{ opacity: 1; transform: scale(1.0); }
+  70%{ transform: scale(0.9); }
+  100%{ transform: scale(1); }
+  }

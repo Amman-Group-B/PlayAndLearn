@@ -11,6 +11,17 @@ var timeGauge = document.getElementById("timeGauge");
 var progress = document.getElementById("progress");
 var scoreDiv = document.getElementById("scoreContainer");
 var container = document.getElementById("container");
+var startPlayingButton=document.getElementById('startPlayingButton');
+var constructorGif=document.getElementById('constructorGif');
+var coverflow=document.getElementById('coverflow');
+var questionsContainer=document.getElementById('questionsContainer');
+var questionsDiv=document.getElementById('questionsDiv');
+
+
+
+
+
+
 // create some variables
 var runningQuestion = 0;
 var count = 0;
@@ -65,15 +76,31 @@ var englishImage = document.getElementById('english');
 var coverFlow = document.getElementById('coverflow');
 
 mathImage.addEventListener('click', function () {
+    coverFlow.style.display='none';
+    questionsContainer.style.display='inline';
+    questionsDiv.style.display='inline';
+
     chooseCategory('Math')
 })
 generalImage.addEventListener('click', function () {
+    coverFlow.style.display='none';
+    questionsContainer.style.display='inline';
+    questionsDiv.style.display='inline';
+
     chooseCategory('General')
 })
 arabicImage.addEventListener('click', function () {
+    coverFlow.style.display='none';
+    questionsContainer.style.display='inline';
+    questionsDiv.style.display='inline';
+
     chooseCategory('Arabic')
 })
 englishImage.addEventListener('click', function () {
+    coverFlow.style.display='none';
+    questionsContainer.style.display='inline';
+    questionsDiv.style.display='inline';
+
     chooseCategory('English');
 })
 
@@ -201,6 +228,8 @@ function scoreRender() {
                     "img/1.png";
     scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
+
+    updateScore();
 }
 var addQuestionButton = document.getElementById('addQuestionButton');
 //addQuestionButton.addEventListener("click",addQuestion);
@@ -220,21 +249,59 @@ function addQuestion() {
 }
 //console.log('questions[0]: ', questions[0]);
 
-var welcomeImage = document.getElementById("welcomeImage");
-var welcome = document.getElementById("welcome");
+// --------------------------- User updates on score -------------------------------//
+var welcomeGif = document.getElementById("welcomeGif");
+var welcomeDiv = document.getElementById("welcomeDiv");
+var activeUser = JSON.parse(localStorage.getItem('activeUser')) || [];
+
+     //displayNone();
+
+    welcomeGif.addEventListener('click', welcomeDisplay);
 
 
-welcomeImage.addEventListener('click', welcomeDisplay);
 
 function welcomeDisplay(event) {
     event.preventDefault();
-    welcomeImage.classList.add('member');
-    welcomeImage.classList.add('imgDiv');
+    welcomeGif.classList.add('member');
+    welcomeGif.classList.add('imgDiv');
 
     setTimeout(displayNone, 1500);
 
 }
 
 function displayNone() {
-    welcome.style.display = "none";
+    welcomeDiv.style.display = "none";
 }
+
+function updateScore() {
+    activeUser[2] += score;
+
+    localStorage.setItem('activeUser', JSON.stringify(activeUser))
+    saveScoreUpdates()
+}
+
+var allUsers = JSON.parse(localStorage.getItem('users'));
+function saveScoreUpdates() {
+  for (var i = 0; i < allUsers.length; i++) {
+    if (activeUser[0] == allUsers[i].name) {
+      console.log('found match at', allUsers[i].name);
+      allUsers[i].notes = activeUser[3];
+      allUsers[i].score = activeUser[2];
+      break;
+    }
+  }
+  localStorage.setItem('users', JSON.stringify(allUsers))
+}
+
+
+//startPlayingButton.style.display='None';
+startPlayingButton.addEventListener('click',function(){
+    event.preventDefault();
+
+    
+    constructorDiv.style.display='none';
+    coverflow.style.display='inline';
+    startPlayingButton.style.display='none';
+
+
+})

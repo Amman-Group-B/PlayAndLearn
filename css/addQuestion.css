@@ -53,7 +53,7 @@ header ul :hover{
 }
 
 footer {
-position: relative;
+    position: fixed;
     text-align: center;
     margin: 0px;
 }

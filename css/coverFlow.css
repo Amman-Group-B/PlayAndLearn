@@ -4,9 +4,25 @@ main {
   height: 500px;
 }
 #coverflow {
-  height: 100%;
+
+
+  background-color: #64c9df;
   width: 100%;
+  position: absolute;
+  top: 168px;
+  left: 0%;
+
+  /* z-index: -1; */
+  filter: drop-shadow(2px 4px 6px black) brightness(0.9);
+  display: none;
+  height: 355px;
+
   perspective: 1000px;
+  overflow-x: hidden;
+
+
+
+
 }
 
 #coverflow section {
@@ -56,4 +72,9 @@ input[type="range" i] {
 #prev:active, #next:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+hr{
+  filter: drop-shadow(2px 4px 6px black) brightness(0.9);
+
 }

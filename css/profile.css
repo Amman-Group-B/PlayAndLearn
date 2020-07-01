@@ -1,34 +1,8 @@
-
-section {
-  padding: 40px;
-  display: inline-flex;
-  width: 100%;
-  padding-top: 96px;
-}
-
-aside {
-  margin: 0 auto;
-  display: inline-flex;
-}
-
-
-
-
-
-
-
-
-
-
-textarea {
-  font-size: 36px;
-  resize: none; 
-  overflow: auto;
-}
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 body {
     background: rgb(100, 201, 223);
     align-items: center;
+    overflow-y: scroll;
 }
 header,footer{
     font-family: 'Pangolin', cursive;
@@ -76,25 +50,140 @@ header ul :hover{
     color:#FDFFFC ;
 }
 
+
+section {
+  display: inline-flex;
+  width: 100%;
+  margin: 80px 0 0 0;
+}
+#profile {
+  padding: 20px;
+}
+#profImg {
+}
+#profImage {
+  width: 256px;
+  border-radius: 25%;
+}
+#journalForm {
+  padding: 20px;
+  width: 220px;
+}
+#flashCards {
+  margin: 0 auto;
+  display: inline-flex;
+}
+
+
+
+
+
+
+
+
+
+
+textarea {
+  font-size: 18px;
+  resize: none; 
+  overflow: auto;
+}
+fieldset input {
+  position: relative;
+}
+#textCount {
+  position: relative;
+    top: -30px;
+    color: grey;
+    padding: 5px;
+    pointer-events: none;
+
+}
+
+div#frame {
+  background: url(../img/cork-board.png) no-repeat;
+  width: 800px;
+  height: 600px;
+  padding-top: 40px;
+  padding-left: 35px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.note {
+  width: 160px;
+  height: 160px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  float: left;
+  margin: 8px;
+  border: 1px solid rgba(0,0,0,.25);
+  transition: transform 0.25s cubic-bezier(0.06, 0.78, 1, 1);
+  text-decoration: none;
+  color: black;
+}
+.pin {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.55);
+  margin: 0 auto;
+  margin-top: 2px;
+}
+.text {
+  position: relative;
+  margin: 4px;
+  top: -10px;
+  font-family: 'The Girl Next Door', cursive;
+  z-index: -1;
+}
+div#frame a:hover.note {
+  border: 1px solid rgba(0,0,0,.75);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+div#frame a:nth-child(n) .pin {
+  background-image: radial-gradient(yellow 50%, black 100%);
+}
+div#frame a:nth-child(3n) .pin {
+  background-image: radial-gradient(red 50%, black 100%);
+}
+div#frame a:nth-child(5n) .pin, div#frame a:last-child .pin {
+  background-image: radial-gradient(blue 50%, white 100%);
+}
+div#frame a:nth-child(2n), div#frame a:nth-child(7) {
+  transform: rotate(-3.5deg);
+  background-color: rgba(104, 97, 207, 0.8);
+}
+
+div#frame a:nth-child(3n),div#frame a:first-child {
+  transform: rotate(-10.5deg);
+  background-color: rgba(51, 255, 255, 0.8);
+}
+div#frame a:nth-child(5n),div#frame div#frame a:last-child {
+  transform: rotate(7.5deg);
+  background-color: rgba(255, 255, 51, 0.8);
+}
+
 footer {
-position: relative;
-text-align: center;
-bottom: 0;   
-margin: 0px;
-height: 35px;
-}
-footer div{
-    display: inline-block;
-    position: absolute;
-    right: 20px;
-    top:3px;
-}
-footer #copyRight{
-    display: inline-block;
-    position: absolute;
-    left: 0px;
-    top:15px;
-}
-footer .fa {
-    font-size: 3em !important;
-}
+  position: fixed;
+  text-align: center;
+  bottom: 0;   
+  margin: 0px;
+  height: 35px;
+  }
+  footer div{
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      top:3px;
+  }
+  footer #copyRight{
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      top:15px;
+  }
+  footer .fa {
+      font-size: 3em !important;
+  }
+  
