@@ -13,7 +13,6 @@ main {
   left: 0%;
 
   /* z-index: -1; */
-  filter: drop-shadow(2px 4px 6px black) brightness(0.9);
   display: none;
   height: 355px;
 
@@ -41,8 +40,7 @@ main {
   transform-style: preserve-3d;
   transition: all 300ms ease-in;
 
-  box-shadow: 6px 8px 22px -1px rgba(117, 117, 117, 0.9);  -webkit-box-reflect: below 0
-  -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), to(white)); 
+  box-shadow: 6px 8px 22px -1px rgba(117, 117, 117, 0.9); -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), to(white)); 
 }
 
 #controls {
@@ -73,8 +71,4 @@ input[type="range" i] {
 #prev:active, #next:active {
   box-shadow: 0 1px rgba(117, 117, 117, 0.5);
   transform: translateY(4px);
-}
-
-hr{
-  filter: drop-shadow(2px 4px 6px black) brightness(0.9);
 }
