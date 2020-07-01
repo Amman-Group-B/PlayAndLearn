@@ -3,14 +3,17 @@ body {
     background: #DCF5FF;
     align-items: center;
 } */
-#container{
-    margin : 20px auto;
+#questionsContainer{
     background-color: white;
     height: 300px;
     width : 700px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
-    position: relative;
+    position: absolute;
+    top: 20px;
+    left: 22%;
+    display: none;
+
 }
 #start{
     font-size: 1.5em;
@@ -122,14 +125,19 @@ body {
 }
 #scoreContainer {
     background-color: white;
-    opacity: 0.8;
-    height: 100%;
+    height: 300px;
+    width : 700px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
-    position: relative;
+    position: absolute;
+    top: 0px;
+    left: 0%;
     display: none;
-    top: -65px;
+    opacity: 0.8;
+    border-radius: 5px;
+    display: none;
 }
+
 #scoreContainer img{
     position: absolute;
     top:100px;
@@ -140,7 +148,7 @@ body {
     display: block;
     width : 59px;
     height :59px;
-    top:130px;
+    top:180px;
     left:325px;
     font-size: 1.5em;
     font-weight: bold;
@@ -152,7 +160,7 @@ body {
     overflow: hidden;
     align-items: center;
 }
-header,footer{
+footer{
     font-family: 'Pangolin', cursive;
     text-decoration: none;
     width: 100%;
@@ -170,14 +178,16 @@ header img{
     left: 65px;
     top: 25px;
     height: 120px;
+    z-index: 1000;
+
 }
 
 header ul{
-    position: absolute;
-    left: 47%;
-    padding: 0px 5px 0px 5px;
+    position: relative;
+    display: inline;
+    left: 30%;
     top: 28px;
-    font-size: 25px;
+    font-size: 20px;
 }
 header ul li{
   color:#011672;
@@ -221,17 +231,22 @@ footer .fa {
     font-size: 3em !important;
 }
 
-#imageDiv {
+#constructorDiv {
     background-color: #64c9df;
     width: 100%;
+    height: 355px;
+
     position: absolute;
-    top: 100px;
-    z-index: -1;
+    top: 120px;
+    left: 0%;
+
+    /* z-index: -1; */
     filter: drop-shadow(2px 4px 6px black) brightness(0.9);background-color: #64c9df;
 }
-#imageDiv img{
+
+#constructorGif{
     display: block;
-    margin: 0 0 0 50%;
+    margin-left: 31%;
     border: none;
     width: 500px;
 }
@@ -243,6 +258,8 @@ path {
     height: 200px;
     width: 300px;
     animation: pathChange reverse infinite 8s;
+    position: absolute;
+
 }
 @keyframes pathChange{
     0%{
@@ -280,32 +297,31 @@ path {
     }
 }
 
-footer .fa {
+footer fa-address-card {
     font-size: 3em !important;
 }
 
-#welcome {
+#welcomeDiv {
 
 height: 100%;
 width: 100%;
     background-color: rgba(189, 198, 223, 0.774);
     border-radius: 20px;
     position: fixed;
-    top:0%;
-    
+    top:0%;    
     z-index: 100;
-
+    padding-top: 7%;
 }
-#welcome h1{
+#welcomeDiv h1{
     text-align: center;
     color: orangered;
     font-family: 'Pangolin', cursive;
 font-size: 60px;
 font-weight: 800;
 }
-#welcome img{
+#welcomeDiv img{
     display: block;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     margin: 0 auto;
     height: 400px;
 }
@@ -326,3 +342,52 @@ font-weight: 800;
     animation: slide  1.5s;
 
 }
+header{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: #FDFFFC;
+    font-family: 'Pangolin', cursive;
+    text-decoration: none;
+    width: 100%;
+    height: 90px;
+    padding: 12px 0;
+    border : 2px solid black;
+}
+#pathContainer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color:#626BF5;
+    height: 200px;
+}
+
+#startPlayingButton{
+    color: white;
+    position: absolute;
+    top: 400px;
+    left: 44%;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: #7172a1;
+   
+}
+
+#questionsDiv{
+    background-color: #64c9df;
+    width: 100%;
+    height: 355px;
+    display: none;
+
+    position: absolute;
+    top: 120px;
+    left: 0%;
+
+    /* z-index: -1; */
+    filter: drop-shadow(2px 4px 6px black) brightness(0.9);background-color: #64c9df;
+
+}
+
