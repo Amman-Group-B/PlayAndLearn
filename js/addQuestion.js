@@ -34,17 +34,35 @@ var div = document.getElementById("img");
 
 addQuestionButton.addEventListener("mouseover", addPlus);
 
-// function addPlus(){
-//     document.getElementById("img").style.display = "block"; 
-//     var image = document.createElement('img');
-//     image.src ="img/add.png";
-//     image.style.top = "Math.floor(Math.random()*1500)"
+function addPlus(){
+    // for (var k=0 ; i<7 ; i++){
+
+        for (var t = 0 ; t < 2 ; t++ ){
+           var img= document.createElement('img');
+           document.getElementById("img").style.display = "block";
+           img.src ="img/add.png";
+           img.style.width= 50+ "px";
+           img.style.height=50+"px";
+           img.style.top = Math.floor(Math.random()*1500) + "px";
+           img.style.left = Math.floor(Math.random()*1500) + "px" ;
+           div.appendChild(img);
+           setInterval(function (){}, 5000)
+         
+        }
+       
+        
+    // }
     
-// }
-// addQuestionButton.addEventListener("mouseout", removePlus);
-// function removePlus(){
-//     document.getElementById("img").style.display ="none";
-// }
+    
+}
+
+
+addQuestionButton.addEventListener("mouseout", removePlus);
+
+function removePlus(){
+    img.parentNode.removeChild();
+    // document.getElementById("img").style.display ="none";
+}
 
 
 
