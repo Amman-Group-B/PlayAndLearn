@@ -3,11 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-
-    <!-- <link rel="stylesheet" href="css/addQuestion.css"> -->
     <link rel="stylesheet" href="css/questionadd.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Add Questions</title>
@@ -15,19 +12,30 @@
 </head>
 
 <body>
-    <header>
+    <header id='myHeader'>
         <div>
             <img src="img/logoAnimated.gif">
         </div>
-        <nav>
+        <nav id='myNavbar'>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="addQuestion.html"> Add Questions</a></li>
+                <li>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+
+                    <a href="index.html">Home</a></li>
+
+                <li>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+
+                    <a href="addQuestion.html"> Add Questions</a></li>
+
                 <li>
                     <i class="fa fa-address-card" aria-hidden="true"></i>
                     <a href="profile.html"> Profile</a>
                 </li>
-                <li><a href="aboutUs.html">About Us</a></li>
+                <li>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+
+                    <a href="aboutUs.html">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -93,6 +101,7 @@
         </svg>
     </div>
 
+    
     <footer>
         <div id="copyRight">
             &copy; LTUC
