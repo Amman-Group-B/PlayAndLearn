@@ -4,7 +4,7 @@ body {
     align-items: center;
     overflow: hidden;
 }
-header,footer{
+footer{
     font-family: 'Pangolin', cursive;
     text-decoration: none;
     width: 100%;
@@ -22,13 +22,16 @@ header img{
     left: 65px;
     top: 25px;
     height: 120px;
+    z-index: 1000;
+
 }
 
 header ul{
-    position: absolute;
-    left: 47%;
+    position: relative;
+    display: inline;
+    left: 30%;
     top: 28px;
-    font-size: 25px;
+    font-size: 20px;
 }
 header ul li{
   color:#011672;
@@ -70,7 +73,9 @@ footer #copyRight{
 }
 footer .fa {
     font-size: 3em !important;
+    color: #011672;
 }
+
 
 #img img:nth-child(1){
     position: absolute;
