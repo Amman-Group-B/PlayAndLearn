@@ -38,7 +38,7 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
-    filter: opacity(0.5) blur(2px);
+    /* filter: opacity(0.5) blur(2px); */
 }
 #qImg img{
     width : 200px;
@@ -47,11 +47,10 @@ body {
 }
 
 #question{
-    width: 500px;
+    width: 100%;
     height: 125px;
-    position: absolute;
-    right: -25%;
     top: 15%;
+    text-align: center;
 }
 #question p{
     margin : 0;
@@ -121,16 +120,15 @@ body {
     margin-left : 5px;
     margin-right : 5px;
 }
-#scoreContainer{
-    margin : 20px auto;
+#scoreContainer {
     background-color: white;
     opacity: 0.8;
-    height: 300px;
-    width : 700px;
+    height: 100%;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
     position: relative;
     display: none;
+    top: -65px;
 }
 #scoreContainer img{
     position: absolute;
@@ -151,6 +149,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 body {
     background: rgb(100, 201, 223);
+    overflow: hidden;
     align-items: center;
 }
 header,footer{
@@ -158,11 +157,11 @@ header,footer{
     text-decoration: none;
     width: 100%;
     height: 70px;
-  /* position: relative; */
     background-color:#FDFFFC;
-    padding: 12px;
+    padding: 12px 0;
     border : 2px solid black;
 }
+
 header div{
     position: relative;;
 }
@@ -200,7 +199,7 @@ header ul :hover{
 }
 
 footer {
-position: relative;
+position: fixed;
 text-align: center;
 bottom: 0;   
 margin: 0px;
@@ -224,11 +223,17 @@ footer .fa {
 
 #imageDiv {
     background-color: #64c9df;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    z-index: -1;
+    filter: drop-shadow(2px 4px 6px black) brightness(0.9);background-color: #64c9df;
 }
-div img{
+#imageDiv img{
     display: block;
-    margin: 0 auto;
+    margin: 0 0 0 50%;
     border: none;
+    width: 500px;
 }
 path {
     padding: 0px;
@@ -299,8 +304,9 @@ font-size: 60px;
 font-weight: 800;
 }
 #welcome img{
+    display: block;
     padding-bottom: 30px;
-    margin: auto;
+    margin: 0 auto;
     height: 400px;
 }
 
@@ -310,13 +316,13 @@ font-weight: 800;
 
 @keyframes  slide {
     to {margin-left: 65px;}
-    to {margin-top: 25px;}
+    to {margin-top: 35px;}
 
     from{height: 400px;}
     to{height: 120px;}
 
 }
 .imgDiv {
-    animation: slide ease 1.5s;
+    animation: slide  1.5s;
 
 }

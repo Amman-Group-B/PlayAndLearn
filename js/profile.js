@@ -66,14 +66,14 @@ function updateCartPreview(event) {
     // addSelectedItemToCart(event);
     // cart.saveToLocalStorage();
     // updateCartPreview();
-    saveNotesUpdates();
   }
 
 // ------------------- Print Notes from storage and add from input ------------------- //
   
   var activeUser = JSON.parse(localStorage.getItem('activeUser')) || [];
-
   var frame = document.getElementById('frame');
+  frame.addEventListener('dblclick', removeItemFromFrame);
+
   function renderNotes() {
 
     var notes = activeUser[3];
@@ -82,6 +82,7 @@ function updateCartPreview(event) {
 
       var anchor = document.createElement('a');
       anchor.classList.add('note','sticky'+i);
+      anchor.id = i;
 
       var pin = document.createElement('div');
       pin.classList.add('pin');
@@ -92,6 +93,7 @@ function updateCartPreview(event) {
       text.classList.add('text');
       anchor.appendChild(text);
       frame.appendChild(anchor);
+      saveNotesUpdates()
       // if(i >= 11) {
 
       // }
@@ -105,6 +107,20 @@ function updateCartPreview(event) {
     document.getElementById("highScore").innerHTML = activeUser[2];
   }
 
+  function removeItemFromFrame(e) {
+    console.log(e.target.id);
+    console.log(activeUser[3])
+
+    // e.target.remove();
+    activeUser[3].splice(e.target.id,1,'');
+    var filtered = activeUser[3].filter(function (el) {
+      return el != '';
+    });
+    activeUser[3] = filtered;
+    console.log(activeUser[3])
+    localStorage.setItem('activeUser', JSON.stringify(activeUser))
+    renderNotes();
+  }
   renderNotes();
   renderProfile();
   // -------------------------- Save Active User Details ------------------------//

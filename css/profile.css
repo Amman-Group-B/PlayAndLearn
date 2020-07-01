@@ -2,6 +2,7 @@
 body {
     background: rgb(100, 201, 223);
     align-items: center;
+    overflow-y: scroll;
 }
 header,footer{
     font-family: 'Pangolin', cursive;
@@ -68,7 +69,7 @@ section {
   padding: 20px;
   width: 220px;
 }
-aside {
+#flashCards {
   margin: 0 auto;
   display: inline-flex;
 }
@@ -117,11 +118,8 @@ div#frame {
   margin: 8px;
   border: 1px solid rgba(0,0,0,.25);
   transition: transform 0.25s cubic-bezier(0.06, 0.78, 1, 1);
-
-}
-.sticky0 {
-  transform: rotate(-3.5deg);
-  background-color: #CBFAFA;
+  text-decoration: none;
+  color: black;
 }
 .pin {
   border-radius: 50%;
@@ -138,9 +136,9 @@ div#frame {
   font-family: 'The Girl Next Door', cursive;
   z-index: -1;
 }
-div#frame a:focus.note {
+div#frame a:hover.note {
   border: 1px solid rgba(0,0,0,.75);
-  transform: scale(2) ;
+  transform: scale(1.2);
   cursor: pointer;
 }
 div#frame a:nth-child(n) .pin {
@@ -167,7 +165,7 @@ div#frame a:nth-child(5n),div#frame div#frame a:last-child {
 }
 
 footer {
-  position: relative;
+  position: fixed;
   text-align: center;
   bottom: 0;   
   margin: 0px;
