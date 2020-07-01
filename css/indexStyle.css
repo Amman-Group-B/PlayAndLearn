@@ -229,14 +229,13 @@ footer #copyRight{
 }
 footer .fa {
     font-size: 3em !important;
-    color: #011672;
+    color:#000;
 }
 
 #constructorDiv {
     background-color: #64c9df;
     width: 100%;
     height: 375px;
-
     position: absolute;
     top: 168px;
     left: 0%;
