@@ -98,8 +98,15 @@ function updateCartPreview(event) {
     }
   }
 
-  renderNotes()
+  function renderProfile() {
+    document.getElementById("profImage").src = '';
+    document.getElementById("userName").innerHTML = activeUser[0];
+    document.getElementById("profImage").src = activeUser[1];
+    document.getElementById("highScore").innerHTML = activeUser[2];
+  }
 
+  renderNotes();
+  renderProfile();
   // -------------------------- Save Active User Details ------------------------//
 
   var allUsers = JSON.parse(localStorage.getItem('users'));

@@ -58,8 +58,15 @@ section {
 #profile {
   padding: 20px;
 }
+#profImg {
+}
+#profImage {
+  width: 256px;
+  border-radius: 25%;
+}
 #journalForm {
   padding: 20px;
+  width: 220px;
 }
 aside {
   margin: 0 auto;
