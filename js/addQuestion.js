@@ -39,12 +39,14 @@ function addPlus(){
 
         for (var t = 0 ; t < 2 ; t++ ){
            var img= document.createElement('img');
-           document.getElementById("img").style.display = "block";
+        //    document.getElementById("img").style.display = "block";
            img.src ="img/add.png";
            img.style.width= 50+ "px";
            img.style.height=50+"px";
            img.style.top = Math.floor(Math.random()*1500) + "px";
+           console.log(img.style.top + "top")
            img.style.left = Math.floor(Math.random()*1500) + "px" ;
+           console.log(img.style.left + "left")
            div.appendChild(img);
            setInterval(function (){}, 5000)
          
@@ -60,7 +62,7 @@ function addPlus(){
 addQuestionButton.addEventListener("mouseout", removePlus);
 
 function removePlus(){
-    img.parentNode.removeChild();
+    // img.parentNode.removeChild(img);
     // document.getElementById("img").style.display ="none";
 }
 
