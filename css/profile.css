@@ -13,6 +13,7 @@ header,footer{
     background-color:#FDFFFC;
     padding: 12px;
     border : 2px solid black;
+    z-index: 999;
 }
 header div{
     position: relative;;
@@ -50,7 +51,11 @@ header ul :hover{
     color:#FDFFFC ;
 }
 
-
+main {
+  background: url(../img/notebar.png) repeat-y;
+  width: 900px;
+  margin-top: 100px;
+}
 section {
   display: inline-flex;
   width: 100%;
@@ -69,22 +74,6 @@ section {
   padding: 20px;
   width: 220px;
 }
-#flashCards {
-  margin: 0 auto;
-  display: inline-flex;
-}
-
-
-
-
-
-main {
-    background: url(../img/notebar.png) repeat-y;
-
-}
-
-
-
 
 textarea {
   /* background: url(../img/notebar.png) repeat-y; */
@@ -104,6 +93,17 @@ fieldset input {
     padding: 5px;
     pointer-events: none;
 
+}
+fieldset button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+fieldset button > i {
+  font-size: 70px !important;
+
+}
+fieldset button > p {
+  font-size: 17px;
 }
 
 div#frame {
@@ -169,7 +169,6 @@ div#frame a:nth-child(5n),div#frame div#frame a:last-child {
   transform: rotate(7.5deg);
   background-color: rgba(255, 255, 51, 0.8);
 }
-
 footer {
   position: fixed;
   text-align: center;

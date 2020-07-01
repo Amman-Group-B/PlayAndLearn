@@ -1,3 +1,4 @@
+
 var card = document.getElementById('origin');
 console.log(card)
 card.addEventListener('click',flipMe)
@@ -30,6 +31,8 @@ registerEvents();
 
 var uniqueId = 0;
 
+
+
 function randomCard() {
   clearTimeout(timeout);         // clears timeout to allow users to study when flipping to avoid accidental flip
   timeout = window.setInterval(function(){randomCard()}, timer);
@@ -51,14 +54,14 @@ function randomCard() {
   var frontCard = document.createElement('div'); // builds front face
   frontCard.classList.add('card__face')
   frontCard.classList.add('card__face--front')
-  frontCard.innerHTML = questionBank[i][j].question;
+  frontCard.innerHTML = '<p>' + questionBank[i][j].question + '</p>';
   cardHolder.appendChild(frontCard);
   
   
   var backCard = document.createElement('div'); // builds back face
   backCard.classList.add('card__face')
   backCard.classList.add('card__face--back')
-  backCard.innerHTML = questionBank[i][j][answerText];
+  backCard.innerHTML = '<p>' + questionBank[i][j][answerText] + '</p>';
   cardHolder.appendChild(backCard);
   
   var card2 = document.getElementById(uniqueId);

@@ -30,49 +30,62 @@
 </header>
 
 <main>
-  <section>
-    <aside id="profile">
-      <div id="profImg">
-        <img id="profImage" src="img/avatars/avatar-default.png">
-      </div>
-      <article id="basicInformation">
-        <p id="userName"></p>
-        <p id="highScore"></p>
-      </article>
-    </aside>
-
-    <form id="journalForm">
-      <fieldset>
-        <legend>My daily journal</legend>
-        <label id="dateTitle"for="fname">Today: </label>
-        <textarea id="textarea" name="Text1" maxlength="75" placeholder="Remember, be honest." cols="20" rows="5"></textarea>
-        <p id="textCount">Characters left: 75</p>
-        <input type="submit">
-      </fieldset>
-    </form>
-
-    <aside id="flashCards">
-      <div id="controls">
-        <p>Click card to flip.</p>
-        <i id="next" class="fa fa-caret-square-o-right fa-3" aria-hidden="true"></i>
-      </div>
-      <div id="cards" class="scene scene--card">
-        <div id="origin" class="card">
-          <div class="card__face card__face--front">front</div>
-          <div class="card__face card__face--back">back</div>
+  <div id="profileSection">
+    <section>
+      <aside id="profile">
+        <div id="profImg">
+          <img id="profImage" src="img/avatars/avatar-default.png">
         </div>
-      </div>
-    </aside>
-</section>
-<section id="pastJournals">
-  <div id='frame'>
-    <a class="note sticky1">
-        <div class='pin'></div>
-        <div class='text'><p>Today</p>wdadawdakawj nfekefkkee kfkefkefka  kfeakef akekfeakjef akekfeakjef kfeakef</div>
-    </a>
-    
+        <article id="basicInformation">
+          <p id="userName"></p>
+          <p id="highScore"></p>
+        </article>
+      </aside>
+  
+      <form id="journalForm">
+        <fieldset>
+          <legend>My daily journal</legend>
+          <label id="dateTitle"for="fname">Today: </label>
+          <textarea id="textarea" name="Text1" maxlength="75" placeholder="Remember, be honest." cols="20" rows="5"></textarea>
+          <p id="textCount">Characters left: 75</p>
+          <button type="submit">
+            <p>click to flip</p>        
+            <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+          </button>
+  
+        </fieldset>
+      </form>
+  
+      <aside id="flashCards">
+        <div id="controls">
+          <p>click to flip</p>
+          <i id="next" class="fa fa-caret-square-o-right fa-3" aria-hidden="true"></i>
+        </div>
+        <div id="cards" class="scene scene--card">
+          <div id="origin" class="card">
+            <div class="card__face card__face--front"><p>front-face</p></div>
+            <div class="card__face card__face--back"><p>back-face</p></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="pastJournals">
+      <div id='frame'>
+        <a class="note sticky1">
+            <div class='pin'></div>
+            <div class='text'><p>Today</p>wdadawdakawj nfekefkkee kfkefkefka  kfeakef akekfeakjef akekfeakjef kfeakef</div>
+        </a>
+        </div>
+    </section>
+  </div>
+
+  <aside id="totalScore">
+    <div id="listView">
+      
     </div>
-</section>
+  </aside>
+  
 
 
 <div id="slide">

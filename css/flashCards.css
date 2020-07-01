@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 body {
   font-family: sans-serif;
 }
@@ -8,7 +10,6 @@ body {
   margin: 0 auto;
   perspective: 600px;
 }
-
 .card {
   width: 100%;
   height: 100%;
@@ -17,6 +18,10 @@ body {
   cursor: pointer;
   position: relative;
   box-shadow: 8px 1px 5px 0px rgba(117, 117, 117, 1);
+}
+.card p {
+  margin-top: 100px;
+  font: 30px 'Oswald', sans-serif;
 }
 
 .card__face {
@@ -31,13 +36,13 @@ body {
 }
 
 .card__face--front {
-  background: red;
+  background: #ff0000ab;
   border-radius: 5px;
 
 }
 
 .card__face--back {
-  background: blue;
+  background: #3640d9a8;;
   transform: rotateY(180deg);
   border-radius: 5px;
 
@@ -47,11 +52,16 @@ body {
 .flipme {
   transform: rotateY(180deg);
 }
-
-#controls {
+#flashCards {
   margin: 0 auto;
-  text-align: center;
-  padding: 20px;
+}
+#controls {
+  position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    bottom: 273px;
+    left: 420px;
 }
 #controls > i {
   font-size: 4em;
@@ -59,7 +69,7 @@ body {
 }
 
 .animate{
-  animation:bounce-in 1s ease 0s 1 normal;
+  animation:bounce-in 0.5s ease 0s 1 normal;
   }
 
 @keyframes bounce-in {
