@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 body {
     background: #DCF5FF;
     align-items: center;
-}
+} */
 #container{
     margin : 20px auto;
     background-color: white;
@@ -148,13 +148,20 @@ body {
     font-weight: bold;
     text-align: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+body {
+    background: rgb(100, 201, 223);
+    align-items: center;
+}
 header,footer{
     font-family: 'Pangolin', cursive;
     text-decoration: none;
     width: 100%;
-    height: 60px;
+    height: 70px;
   /* position: relative; */
     background-color:#FDFFFC;
+    padding: 12px;
+    border : 2px solid black;
 }
 header div{
     position: relative;;
@@ -167,15 +174,16 @@ header img{
 }
 
 header ul{
-position: absolute;
-left: 60%;
-padding:0px 5px 0px 5px;
-top:10px;
+    position: absolute;
+    left: 47%;
+    padding: 0px 5px 0px 5px;
+    top: 28px;
+    font-size: 25px;
 }
 header ul li{
   color:#011672;
    height: 30px;
-   width: 100px;
+   width: 175px;
    text-align: center;
     padding:6px;
     display: inline-block;
@@ -196,6 +204,7 @@ position: relative;
 text-align: center;
 bottom: 0;   
 margin: 0px;
+height: 35px;
 }
 footer div{
     display: inline-block;
@@ -208,6 +217,9 @@ footer #copyRight{
     position: absolute;
     left: 0px;
     top:15px;
+}
+footer .fa {
+    font-size: 3em !important;
 }
 
 #imageDiv {

@@ -1,6 +1,5 @@
 'use strict';
-// var img = document.getElementById("img");
-// img.style.display = "none";
+
 // var addQuestionButton = document.getElementById('addQuestionButton');
 // addQuestionButton.addEventListener("click", addQuestion);
 
@@ -30,13 +29,22 @@ function addQuestion() {
 
 console.log(localStorage);
 
-// addQuestionButton.addEventListener("mouseover", addPlus);
+var div = document.getElementById("img");
+// img.style.display = "none";
+
+addQuestionButton.addEventListener("mouseover", addPlus);
 
 // function addPlus(){
 //     document.getElementById("img").style.display = "block"; 
+//     var image = document.createElement('img');
+//     image.src ="img/add.png";
+//     image.style.top = "Math.floor(Math.random()*1500)"
+    
 // }
 // addQuestionButton.addEventListener("mouseout", removePlus);
 // function removePlus(){
 //     document.getElementById("img").style.display ="none";
 // }
+
+
 
