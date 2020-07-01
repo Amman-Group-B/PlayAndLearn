@@ -201,6 +201,8 @@ function scoreRender() {
                     "img/1.png";
     scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
+
+    updateScore();
 }
 var addQuestionButton = document.getElementById('addQuestionButton');
 //addQuestionButton.addEventListener("click",addQuestion);
@@ -220,11 +222,16 @@ function addQuestion() {
 }
 //console.log('questions[0]: ', questions[0]);
 
+// --------------------------- User updates on score -------------------------------//
 var welcomeImage = document.getElementById("welcomeImage");
 var welcome = document.getElementById("welcome");
+var activeUser = JSON.parse(localStorage.getItem('activeUser')) || [];
+if (!activeUser.length == 0) {
+    displayNone();
+} else {
+    welcomeImage.addEventListener('click', welcomeDisplay);
 
-
-welcomeImage.addEventListener('click', welcomeDisplay);
+}
 
 function welcomeDisplay(event) {
     event.preventDefault();
@@ -237,4 +244,24 @@ function welcomeDisplay(event) {
 
 function displayNone() {
     welcome.style.display = "none";
+}
+
+function updateScore() {
+    activeUser[2] += score;
+
+    localStorage.setItem('activeUser', JSON.stringify(activeUser))
+    saveScoreUpdates()
+}
+
+var allUsers = JSON.parse(localStorage.getItem('users'));
+function saveScoreUpdates() {
+  for (var i = 0; i < allUsers.length; i++) {
+    if (activeUser[0] == allUsers[i].name) {
+      console.log('found match at', allUsers[i].name);
+      allUsers[i].notes = activeUser[3];
+      allUsers[i].score = activeUser[2];
+      break;
+    }
+  }
+  localStorage.setItem('users', JSON.stringify(allUsers))
 }

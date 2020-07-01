@@ -5,7 +5,8 @@
   width: 64px; /* Set a specific width */
   background-color: rgb(148, 148, 148); /* Dark-grey background */
   position: fixed;
-  top: 15%
+  top: 15%;
+  left: -50px;
 }
 .bar a {
   display: block; /* Make the links appear below each other instead of side-by-side */
@@ -15,10 +16,12 @@
   color: white; /* White text color */
   font-size: 1em; /* Increased font-size */
   background-color: rgb(46, 46, 46); /* Dark-grey background */
+  transition: transform .3s ease-out;
 
 }
 .bar a:hover {
   background-color: rgb(109, 109, 109); /* Add a hover color */
+  transform: translate(40px, -2px);
 }
 .bar .active {
   background-color: #4CAF50; /* Add an active/current color */
@@ -73,7 +76,7 @@
 #uname, #pwd {
   width: 250px;
   padding: 10px;
-  margin: 8px 0;
+  margin: 8px auto;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -96,9 +99,13 @@ img.avatar {
 }
 .container button {
   display: block;
-  width: 70px;
+  width: 250px;
   border: none;
   padding: 5px;
+  margin: 0 auto;
+}
+.container label {
+  margin-left: 10px;
 }
 label span {
   margin: 0 0 0 10px;

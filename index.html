@@ -30,23 +30,8 @@
         </ul>
     </nav>
 </header>
-<div id="imageDiv">
-    <img src="img/education_800x600_newcolors.gif" alt="" width="60%">
-</div>
 
 <main>
-    <div id="welcome">
-        <img src="img/logoAnimated.gif"  alt="" id="welcomeImage">
-        <h1>WELCOME</h1>
-    </div>
-
-    <!-- <div class="container">
-        <div class="inner">
-            <span>+</span>
-            <p> <a href="addQuestion.html">Add Questions</a></p>
-        </div>
-    </div> -->
-    <!-- <img src="img/sun.jpg" alt="" height="s"> -->
     <div id="coverflow">
         <section id="math"
             data-cover="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWNjPvVeaREIulnT4DgzVH7olodg2hxFn30w&usqp=CAU">
@@ -68,6 +53,22 @@
             <input type="range" id="myRange">
         </div>
     </div>
+    <div id="imageDiv">
+        <img src="img/education_800x600_newcolors.gif" alt="">
+    </div>
+    <div id="welcome">
+        <img src="img/logoAnimated.gif"  alt="" id="welcomeImage">
+        <h1>WELCOME</h1>
+    </div>
+
+    <!-- <div class="container">
+        <div class="inner">
+            <span>+</span>
+            <p> <a href="addQuestion.html">Add Questions</a></p>
+        </div>
+    </div> -->
+    <!-- <img src="img/sun.jpg" alt="" height="s"> -->
+
 
     <div id="container">
         <div id="question"></div>
@@ -92,26 +93,22 @@
         <a class="active" href="#" onclick="toggleLoginModal()"><i class="fa fa-sign-in"></i></a>
         <a href="#" id="scoreBtn" class="disabled"><i class="fa fa-star-half-o"></i></a>
         </div>
-
-        <div id="loginModal" class="modal modal_move open">
+      
+        <div id="loginModal" class="modal modal_move">
             <div class="modal-content">
                 <form id="login">
                     <div class="imgcontainer">
                         <img id="avatarDefault" src="img/avatars/avatar-default.png" alt="Avatar" class="avatar">
                     </div>
-
+      
                     <div class="container">
-                        <label for="uname"><b>Username</b><span id="loginResult"></span></label>
+                        <label for="uname"><p>Username</p><span id="loginResult"></span></label>
                         <input type="text" placeholder="Enter Your Username" id="uname" required>
                     
-                        <label for="pwd"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" id="pwd" required>
-                    
+                        <!-- <label for="avatarUpload"><b>Image Avatar</b></label>
+                        <input type="file" id="avatarUpload" name="avatarUpload" accept="image/png, image/jpeg">
+                     -->
                         <button type="submit">Login</button>
-                    </div>
-
-                    <div class="container" style="background-color:#f1f1f1">
-                        <span class="psw">Forgot <a href="#">password?</a></span>
                     </div>
                 </form>
             </div>
@@ -127,7 +124,6 @@
                     </div>
             </div>
         </div>
-    </div>
 </main>
 
 <footer>

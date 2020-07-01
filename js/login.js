@@ -3,20 +3,16 @@
 // -------------------- Objects -------------------- //
 userArray = JSON.parse(localStorage.getItem('users')) || [];
 
-function User(name, password, url , score) {
+function User(name, url, score, notes) {
   this.name = name;
-  this.password = password;
   this.url = url || '';
+  this.score = score;
+  this.notes = notes || [];
   // this.avatar = function() {
   //   return this.firstName + " " + this.lastName;
   // };
-  // this.score = score;
-  console.log(document.getElementsByClassName("avatar").src)
   document.getElementsByClassName("avatar").src = '';
-  console.log(document.getElementsByClassName("avatar").src)
-
   document.getElementsByClassName("avatar").src = url;
-  console.log(document.getElementsByClassName("avatar").src)
 
   userArray.push(this);
   localStorage.setItem('users', JSON.stringify(userArray));
@@ -24,29 +20,21 @@ function User(name, password, url , score) {
 }
 
 if (!userArray || !userArray.length){ // initializes admin and user roles when new
-  new User("admin","admin"); 
-  new User("Ahmad","123456");
-  new User("Daoud","123456");
-  new User("Rania","123456");
-  new User("Rouqaia","123456");
-  new User("Yahya","123456", "img/avatars/avatar-yahya.jpg");
+  new User("admin", '' , 300); 
+  new User("Ahmad", "img/ahmad.png", 700);
+  new User("Daoud", "img/daoud.png", 900);
+  new User("Rania", "img/rania.png", 800);
+  new User("Rouqaia", "img/roqaia.jpg", 600);
+  new User("Yahya", "img/avatars/avatar-yahya.jpg", 500, [['28/06/2020','this is my first note'], ['29/06/2020','and second note'], ['30/06/2020','and third note'], ['31/06/2020','and etc']]);
   alert ("initialized admin and user roles")
 }
 
-// var options = { 
-//   size: ["S", "M", "L", "XL", "XXL"],
-//   color: ["Red", "Blue", "Green", "White", "Black"]
-// };
-
-
-// console.log(Object.keys(options));
-// for (var key in options) {
-//   console.log(options[key].length);
-// }
 
 // -------------------- Modal JS -------------------- //
 var loginModal = document.getElementById('loginModal');
 var infoModal = document.getElementById('infoModal');
+infoModal.addEventListener('click', toggleScoreModal)
+
 
 function toggleLoginModal() {
   if (loginModal.classList.contains('open')){
@@ -55,7 +43,7 @@ function toggleLoginModal() {
 
   } else {
     loginModal.classList.add('open');
-    // infoModal.classList.remove('open');
+    infoModal.classList.remove('open');
 
   }
 }
@@ -65,6 +53,7 @@ function toggleScoreModal() {
     infoModal.classList.remove('open');
 
   } else {
+    loginModal.classList.remove('open');
     infoModal.classList.add('open');
 
   }
@@ -73,19 +62,18 @@ function toggleScoreModal() {
 // -------------------- Login  -------------------- //
 var login = document.getElementById('login');
 login.addEventListener('submit', loginUser)
-var score = document.getElementById('scoreBtn');
+var scoreModal = document.getElementById('scoreBtn');
+var activeUser = JSON.parse(localStorage.getItem('activeUser')) || [];
 
 function loginUser(event) {
   event.preventDefault();
   setTimeout(toggleLoginModal, 2000);
 
-
-  var uname = document.getElementById('uname').value;  // get form input
-  var pwd = document.getElementById('pwd').value;
-  var updateUser = [];
+  var uname = document.getElementById('uname').value;
+  // var avatarUpload = document.getElementById('avatarUpload').value;  // get form input
   var answer = document.getElementById('loginResult') // get span to print result
   var flagExists = false;
-  console.log(userArray);
+  // console.log(avatarUpload);
 
   Capuname = capitalize(uname); //check name string capitalization
   function capitalize(string) {
@@ -104,22 +92,36 @@ function loginUser(event) {
       answer.innerHTML = '';
       flagExists = true;
       answer.innerHTML = 'User exists.. Importing data';
-      updateUser = [userArray[i].name, userArray[i].url];
+      activeUser = [userArray[i].name, userArray[i].url, userArray[i].score, userArray[i].notes];
+      break;
     }
   }
   if (!flagExists) {
-    new User(uname,pwd);
+    var user = new User(uname);
+    activeUser = [user.name]
+    console.log(userArray);
+    console.log(activeUser);
+
   }
   else if (flagExists) {
     document.getElementById("avatar").src = '';
-    document.getElementById("avatar").src = updateUser[1];
+    document.getElementById("avatar").src = activeUser[1];
   }
 
-  setTimeout(toggleScoreModal, 2400);
-  score.classList.remove('disabled');
-  score.addEventListener('click', toggleScoreModal);
-
-  document.getElementById('name').innerHTML = 'Welcome back! ' + updateUser[0];
-  document.getElementById('intro').innerHTML = 'Lets do some exercises today';
-
+  localStorage.setItem('activeUser', JSON.stringify(activeUser))
+    setTimeout(toggleScoreModal, 2400);
+  activateScore();
 }
+
+function activateScore() {
+  scoreModal.classList.remove('disabled');
+  scoreModal.addEventListener('click', toggleScoreModal);
+
+  document.getElementById('name').innerHTML = 'Welcome back! ' + activeUser[0];
+  document.getElementById('intro').innerHTML = 'Lets do some exercises today';
+}
+
+if (activeUser) {
+  activateScore();
+}
+
