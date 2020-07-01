@@ -56,25 +56,25 @@ main {
   text-align: center;
 }
 
-#controls a  {
-  color: rgb(39, 39, 39); 
+#controls .fa  {
+  color: rgb(0, 0, 0); 
   cursor: pointer;
 }
 
-#controls a:hover  {
-  color: 66FFFF;
+#controls .fa:hover  {
+  color: #525252;
 }
 
 input[type="range" i] {
   width: 400px;
+  
 }
 
 #prev:active, #next:active {
-  box-shadow: 0 5px #666;
+  box-shadow: 0 1px rgba(117, 117, 117, 0.5);
   transform: translateY(4px);
 }
 
 hr{
   filter: drop-shadow(2px 4px 6px black) brightness(0.9);
-
 }

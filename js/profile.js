@@ -104,7 +104,7 @@ function updateCartPreview(event) {
     document.getElementById("profImage").src = '';
     document.getElementById("userName").innerHTML = activeUser[0];
     document.getElementById("profImage").src = activeUser[1];
-    document.getElementById("highScore").innerHTML = activeUser[2];
+    document.getElementById("highScore").innerHTML = 'High Score: ' + activeUser[2];
   }
 
   function removeItemFromFrame(e) {
@@ -123,17 +123,21 @@ function updateCartPreview(event) {
   }
   renderNotes();
   renderProfile();
-  // -------------------------- Save Active User Details ------------------------//
-
-  var allUsers = JSON.parse(localStorage.getItem('users'));
+// -------------------------- Save Active User Details ------------------------//
+  var allUsersProfile = [];
   function saveNotesUpdates() {
-    for (var i = 0; i < allUsers.length; i++) {
-      if (activeUser[0] == allUsers[i].name) {
-        console.log('found match at', allUsers[i].name);
-        allUsers[i].notes = activeUser[3];
-        allUsers[i].score = activeUser[2];
+    console.log(JSON.parse(localStorage.getItem('users')));
+    allUsersProfile = JSON.parse(localStorage.getItem('users'));
+
+    for (var i = 0; i < allUsersProfile.length; i++) {
+      if (activeUser[0] == allUsersProfile[i].name) {
+        console.log('found match at', allUsersProfile[i].name);
+        allUsersProfile[i].notes = activeUser[3];
+        allUsersProfile[i].score = activeUser[2];
         break;
       }
     }
-    localStorage.setItem('users', JSON.stringify(allUsers))
+    localStorage.setItem('users', JSON.stringify(allUsersProfile))
   }
+
+  
