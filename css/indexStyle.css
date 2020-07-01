@@ -333,7 +333,7 @@ font-weight: 800;
 
 @keyframes  slide {
     to {margin-left: 65px;}
-    to {margin-top: 35px;}
+    to {margin-top: -110px;}
 
     from{height: 400px;}
     to{height: 120px;}
