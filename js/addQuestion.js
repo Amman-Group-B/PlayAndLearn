@@ -32,7 +32,7 @@ console.log(localStorage);
 var div = document.getElementById("img");
 // img.style.display = "none";
 
-addQuestionButton.addEventListener("mouseover", addPlus);
+// addQuestionButton.addEventListener("mouseover", addPlus);
 
 function addPlus(){
     // for (var k=0 ; i<7 ; i++){
@@ -43,28 +43,29 @@ function addPlus(){
            img.src ="img/add.png";
            img.style.width= 50+ "px";
            img.style.height=50+"px";
-           img.style.top = Math.floor(Math.random()*1500) + "px";
+           img.style.top =  ( Math.random()* (800 - 100 + 1)) + 100 + "px";
            console.log(img.style.top + "top")
-           img.style.left = Math.floor(Math.random()*1500) + "px" ;
+           img.style.left = ( Math.random()*1300) + "px";
            console.log(img.style.left + "left")
            div.appendChild(img);
-           setInterval(function (){}, 5000)
+           
          
         }
-       
         
+       
     // }
     
     
 }
+window.setInterval(addPlus,1000);
 
 
-addQuestionButton.addEventListener("mouseout", removePlus);
+// addQuestionButton.addEventListener("mouseout", removePlus);
 
-function removePlus(){
+// function removePlus(){
     // img.parentNode.removeChild(img);
     // document.getElementById("img").style.display ="none";
-}
+// }
 
 
 
