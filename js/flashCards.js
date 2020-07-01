@@ -31,7 +31,9 @@ registerEvents();
 
 var uniqueId = 0;
 
-
+window.setTimeout(() => {
+  randomCard();
+}, timer/2);
 
 function randomCard() {
   clearTimeout(timeout);         // clears timeout to allow users to study when flipping to avoid accidental flip

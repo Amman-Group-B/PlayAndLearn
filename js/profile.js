@@ -104,7 +104,7 @@ function updateCartPreview(event) {
     document.getElementById("profImage").src = '';
     document.getElementById("userName").innerHTML = activeUser[0];
     document.getElementById("profImage").src = activeUser[1];
-    document.getElementById("highScore").innerHTML = activeUser[2];
+    document.getElementById("highScore").innerHTML = 'High Score: ' + activeUser[2];
   }
 
   function removeItemFromFrame(e) {
