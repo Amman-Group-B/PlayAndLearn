@@ -140,4 +140,35 @@ function updateCartPreview(event) {
     localStorage.setItem('users', JSON.stringify(allUsersProfile))
   }
 
+  // -------------------------- Print scores of all users ------------------------//
+  function compareClicked(a, b) {
+    const scoreA = a.score
+    const scoreB = b.score
   
+    let comparison = 0;
+    if (scoreA > scoreB) {
+      comparison = -1;
+    } else if (scoreA < scoreB) {
+      comparison = 1;
+    }
+    return comparison;
+  }
+
+  var SortedObj = [];
+  var scoreContainer = document.getElementById('listView');
+
+  function printScores() {
+    scoreContainer.innerHTML = '';
+
+    allUsersProfile = JSON.parse(localStorage.getItem('users'));
+    SortedObj = SortedObj.concat(allUsersProfile); // assign, compare and print at the end
+    SortedObj.sort(compareClicked);
+
+    console.log('Sorted ', SortedObj);
+
+    for (var i = 0; i < allUsersProfile.length; i++) {
+      scoreContainer.innerHTML += "<p><span>" + SortedObj[i].name + "</span><br>" + SortedObj[i].score + "</p>";
+    }
+  }
+
+  printScores();

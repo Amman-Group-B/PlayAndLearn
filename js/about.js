@@ -1,86 +1,136 @@
-'use strict'
+// 'use strict'
 
-var roqaiaText = document.getElementById('roqaiaText');
-roqaiaText.style.display = "none";
-var img = document.getElementById('roqaiaImg');
+// var roqaiaText = document.getElementById('roqaiaText');
+// roqaiaText.style.display = "none";
+// var img = document.getElementById('roqaiaImg');
+// var containerRo = document.getElementById(1)
+// img.addEventListener('click',displayRoqaiaText);
 
-img.addEventListener('mouseover',displayRoqaiaText);
+// function displayRoqaiaText(event){
+//     // event.preventDefault()
+//     if (roqaiaText.style.display =='block'){
+//         roqaiaText.style.display ="none";
+//         containerRo.classList.add('mainView')
 
-function displayRoqaiaText(event){
-    event.preventDefault()
-    roqaiaText.style.display ="block";
-}
+//     }
+//     else {
+//         roqaiaText.style.display ="block";
+//         containerRo.classList.remove('mainView')
 
-img.addEventListener('mouseout', removeRoqaiaText);
+//     }
+//     console.log(event.target)
 
-function removeRoqaiaText (event){
-    event.preventDefault()
-    roqaiaText.style.display ="none";
-}
+// }
 
-var yahyaText = document.getElementById('yahyaText');
-yahyaText.style.display = "none";
-var img = document.getElementById('yahyaImg');
 
-img.addEventListener('mouseover',displayyahyaText);
+// function removeRoqaiaText (event){
+//     event.preventDefault()
 
-function displayyahyaText(event){
-    event.preventDefault() 
-    yahyaText.style.display ="block";
-}
-img.addEventListener('mouseout', removeYahyaText);
+//     if (roqaiaText.getAttribute("style") =='block'){
+//         roqaiaText.style.display ="none";
+//     }
 
-function removeYahyaText (event){
-    event.preventDefault();
-    yahyaText.style.display ="none";
-}
-var ahmadText = document.getElementById('ahmadText');
-ahmadText.style.display = "none";
-var img = document.getElementById('ahmadImg');
+// }
 
-img.addEventListener('mouseover',displayahmadText);
+// var yahyaText = document.getElementById('yahyaText');
+// yahyaText.style.display = "none";
+// var img = document.getElementById('yahyaImg');
 
-function displayahmadText(event){
-    event.preventDefault()
-    ahmadText.style.display ="block";
-}
-img.addEventListener('mouseout', removeAhmadText);
+// img.addEventListener('mouseover',displayyahyaText);
 
-function removeAhmadText (event){
-    event.preventDefault();
-    ahmadText.style.display ="none";
-}
+// function displayyahyaText(event){
+//     event.preventDefault() 
+//     yahyaText.style.display ="block";
+// }
+// img.addEventListener('mouseout', removeYahyaText);
 
-var raniaText = document.getElementById('raniaText');
-raniaText.style.display = "none";
-var img = document.getElementById('raniaImg');
+// function removeYahyaText (event){
+//     event.preventDefault();
+//     yahyaText.style.display ="none";
+// }
+// var ahmadText = document.getElementById('ahmadText');
+// ahmadText.style.display = "none";
+// var img = document.getElementById('ahmadImg');
 
-img.addEventListener('mouseover',displayRaniaText);
+// img.addEventListener('mouseover',displayahmadText);
 
-function displayRaniaText(event){
-    event.preventDefault()
-    raniaText.style.display ="block";
-}
-img.addEventListener('mouseout', removeRaniaText);
+// function displayahmadText(event){
+//     event.preventDefault()
+//     ahmadText.style.display ="block";
+// }
+// img.addEventListener('mouseout', removeAhmadText);
 
-function removeRaniaText (event){
-    event.preventDefault()
-    raniaText.style.display ="none";
-}
+// function removeAhmadText (event){
+//     event.preventDefault();
+//     ahmadText.style.display ="none";
+// }
 
-var daoudText = document.getElementById('daoudText');
-daoudText.style.display = "none";
-var img = document.getElementById('daoudImg');
+// var raniaText = document.getElementById('raniaText');
+// raniaText.style.display = "none";
+// var img = document.getElementById('raniaImg');
 
-img.addEventListener('mouseover',displayDaoudText);
+// img.addEventListener('mouseover',displayRaniaText);
 
-function displayDaoudText(event){
-    event.preventDefault() 
-    daoudText.style.display ="block";
-}
-img.addEventListener('mouseout', removeDaoudText);
+// function displayRaniaText(event){
+//     event.preventDefault()
+//     raniaText.style.display ="block";
+// }
+// img.addEventListener('mouseout', removeRaniaText);
 
-function removeDaoudText (event){
-    event.preventDefault();
-    daoudText.style.display ="none";
-}
+// function removeRaniaText (event){
+//     event.preventDefault()
+//     raniaText.style.display ="none";
+// }
+
+// var daoudText = document.getElementById('daoudText');
+// daoudText.style.display = "none";
+// var img = document.getElementById('daoudImg');
+
+// img.addEventListener('mouseover',displayDaoudText);
+
+// function displayDaoudText(event){
+//     event.preventDefault() 
+//     daoudText.style.display ="block";
+// }
+// img.addEventListener('mouseout', removeDaoudText);
+
+// function removeDaoudText (event){
+//     event.preventDefault();
+//     daoudText.style.display ="none";
+// }
+
+// // --------------------- implement about us animation --------------------- //
+// var timer;
+// var i=0;
+// var developers = document.getElementsByClassName("developersInitial");
+
+// // function displayDevelopers(){
+// //     var displayOne = function(){
+// //         if (i <= developers.length) {
+// //             if (i > 0){
+// //                 developers[i-1].style.display = "none";
+// //                 if (i == developers.length){                // delete last element and move to next function
+// //                     displayAll();
+// //                 }
+// //             }
+// //             developers[i].classList.add('mainView')
+// //             timer = setTimeout(displayOne, 2000);
+// //             i++;
+// //         }
+// //     }; 
+// //     displayOne();
+// // }
+
+// // function displayAll() {
+// //     // alert('display')
+// //     for(var i = 0; i < developers.length; i++) {
+// //         developers[i].style.display = "block";
+// //         developers[i].classList.remove('mainView');
+// //         developers[i].classList.add('developers');
+
+// //     }
+// // }
+// //     // for(var i = 0; i < developers.length; i++) {
+// //     // }
+
+// // displayDevelopers()

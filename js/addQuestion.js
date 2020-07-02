@@ -1,7 +1,7 @@
 'use strict';
 
-// var addQuestionButton = document.getElementById('addQuestionButton');
-// addQuestionButton.addEventListener("click", addQuestion);
+var addQuestionButton = document.getElementById('addQuestionButton');
+addQuestionButton.addEventListener("click", addQuestion);
 
 // var numberOfQuestions = document.getElementById('numberOfQuestions').value; 
 
