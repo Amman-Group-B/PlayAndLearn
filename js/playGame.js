@@ -16,6 +16,9 @@ var constructorGif=document.getElementById('constructorGif');
 var coverflow=document.getElementById('coverflow');
 var questionsContainer=document.getElementById('questionsContainer');
 var questionsDiv=document.getElementById('questionsDiv');
+var emojiImage = document.getElementById('emojiImage');
+var percentageResult = document.getElementById('percentageResult');
+var replayButton = document.getElementById('replayButton');
 
 
 
@@ -217,19 +220,19 @@ function answerIsWrong() {
 }
 // score render
 function scoreRender() {
-    scoreDiv.style.display = "block";
-    // calculate the amount of question percent answered by the user
     var scorePerCent = Math.round(100 * score / (questionQuantity + 1));
-    // choose the image based on the scorePerCent
-    var img = (scorePerCent >= 80) ? "img/5.png" :
+    emojiImage.src = (scorePerCent >= 80) ? "img/5.png" :
         (scorePerCent >= 60) ? "img/4.png" :
             (scorePerCent >= 40) ? "img/3.png" :
                 (scorePerCent >= 20) ? "img/2.png" :
                     "img/1.png";
-    scoreDiv.innerHTML = "<img src=" + img + ">";
-    scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
+    percentageResult.textContent = scorePerCent;
 
-    updateScore();
+
+    scoreDiv.style.display = "block";
+
+
+    //updateScore();
 }
 var addQuestionButton = document.getElementById('addQuestionButton');
 //addQuestionButton.addEventListener("click",addQuestion);
@@ -305,3 +308,20 @@ startPlayingButton.addEventListener('click',function(){
 
 
 })
+
+
+replayButton.addEventListener('click',function(event){
+    event.preventDefault();
+    window.location = 'index.html';
+    // questionQuantity=0;
+    // category="";
+
+    // scoreContainer.style.display='none';
+
+    
+    // constructorDiv.style.display='none';
+    // coverflow.style.display='inline';
+    // startPlayingButton.style.display='none';
+
+   
+});
