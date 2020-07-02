@@ -85,3 +85,10 @@ footer .fa {
 footer fa-address-card {
     font-size: 3em !important;
 }
+#contact{
+    text-align: left;
+    float: left;
+    margin: left;
+    left: 78px;
+    top: 10px;
+}
