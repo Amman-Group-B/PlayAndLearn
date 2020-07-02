@@ -2,27 +2,68 @@
 body {
     background: rgb(100, 201, 223);
     align-items: center;
+    overflow-x: hidden;
 }
+main {
+    height: 785px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 #aboutDevelopres img {
     border-radius: 130px;
     width: 100%;
-    height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 .developers {
-    margin-top: 3%;
-    margin-left: 1%;
-    margin-right: 2%;
-    display: inline-block;
-    width: 16%;
+    position: absolute;
     text-align: center;
     font-size: 15px;
     font-family: 'Pangolin', cursive;
-    font-family: 'Pangolin', cursive;
     color:#011672;
+    animation: slideout  1.5s;
+    animation-fill-mode: forwards;
+    z-index: 100;
+}
+#a1 {
+    left: 25%;
+    top: 15%;
+}
+#a2 {
+    left: 45%;
+    top: 30%;
+}
+#a3 {
+    left: 60%;
+    top: 60%;
+}
+#a4 {
+    left: 35%;
+    top: 60%;
+}
+#a5 {
+    left: 60%;
+    top: 15%;
 }
 b {
     font-size: 30px;
@@ -31,11 +72,13 @@ b {
 
 }
 #aboutApp {
+    position: relative;
+    top: -150px;
     width: 100%;
     text-align: center;
     font-size: 25px;
     font-family: 'Pangolin', cursive;
-    margin: 80px auto;
+    /* margin: 80px auto; */
     color: #000000;
     box-shadow: 10px 10px 5px grey;
     line-height: 1.8;
@@ -43,23 +86,25 @@ b {
     background-image: url(../img/background.gif);
     background-repeat: no-repeat;
     background-size: cover;
-   
-  
+    z-index: 10;
 }
-/* #playImg:hover{
-    width: 400px;
-    height:250px;
-  
-} */
+#aboutApp > p {
+    padding: 0 20%;
+
+}
+#playImg {
+  position: relative;
+  left: 65px;
+  width: 160px;
+  height: 120px;
+}
 #teamMembers{
     font-family: 'Pangolin', cursive;
     font-size: 40px;
     text-align: center;
-    margin-top: 135px;
+    margin-top: 265px;
     margin-bottom: 30px;
-   
 }
-
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -67,4 +112,127 @@ b {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
+#aboutDevelopres {
+    /* display: inline-flex; */
+    background: url(../img/cork-board.png) no-repeat;
+    height: 600px;
+    margin: 0 25%;
+}
+.mainView, .mainViewImage {
+    position: absolute;
+    animation: slide  1.5s;
+    animation-fill-mode: forwards;
 
+}
+
+@keyframes  slideout {
+    0%{
+        margin-left: 590px;
+        }
+    25%{
+        /* margin-left: 125px;
+        margin-top: 20px; */
+    }
+    50%{
+        background-color: rgb(230, 230, 230,75);
+    }
+    100%{
+        margin-left: 0;
+
+    }
+    from{width: 300px;}
+    to{width: 160px;}
+}
+
+#info {
+    display: inline-flex;
+    background-color: rgba(27, 108, 108, 0.5);
+    width: 100%;
+    padding: 5px;
+}
+
+#info p {
+    color: white;
+    padding: 0 10%;
+}
+
+.note {
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    float: left;
+    margin: 8px;
+    border: 1px solid rgba(0,0,0,.25);
+    transition: transform 0.25s cubic-bezier(0.06, 0.78, 1, 1);
+    text-decoration: none;
+    color: black;
+  }
+  .pin {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.55);
+    margin: 0 auto;
+    margin-top: 2px;
+  }
+  .text {
+    position: relative;
+    margin: 4px;
+    top: -10px;
+    font-size: 10px;
+    font-family: 'The Girl Next Door', cursive;
+    z-index: -1;
+  }
+   a:hover.note {
+    border: 1px solid rgba(0,0,0,.75);
+    transform: scale(2);
+    cursor: pointer;
+    z-index: 101;
+  }
+   a:nth-child(n) .pin {
+    background-image: radial-gradient(yellow 50%, black 100%);
+  }
+   a:nth-child(3n) .pin {
+    background-image: radial-gradient(red 50%, black 100%);
+  }
+   a:nth-child(5n) .pin,  a:last-child .pin {
+    background-image: radial-gradient(blue 50%, white 100%);
+  }
+   a:nth-child(2n),  a:nth-child(7) {
+    transform: rotate(-3.5deg);
+    background-color: rgba(104, 97, 207, 0.8);
+  }
+  
+   a:nth-child(3n), a:first-child {
+    transform: rotate(-10.5deg);
+    background-color: rgba(51, 255, 255, 0.8);
+  }
+   a:nth-child(5n),  a:last-child {
+    transform: rotate(7.5deg);
+    background-color: rgba(255, 255, 51, 0.8);
+  }
+  .sticky1 {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+  }
+  .sticky2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+  }
+  .sticky3 {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+  }
+  .sticky4 {
+    position: absolute;
+    top: 15%;
+    left: 65%;
+  }
+  .sticky5 {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+  }

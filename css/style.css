@@ -20,6 +20,9 @@ footer{
     padding: 12px 0;
     border : 2px solid black;
 }
+header, footer {
+    z-index: 999;
+}
 
 header div{
     position: relative;;
