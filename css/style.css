@@ -22,6 +22,9 @@ footer{
     border : 2px solid black;
     z-index: 1000;
 }
+header, footer {
+    z-index: 999;
+}
 
 header div{
     position: relative;;

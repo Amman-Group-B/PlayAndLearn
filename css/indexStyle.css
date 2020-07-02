@@ -229,21 +229,21 @@ path {
 
 #welcomeDiv {
 
-height: 100%;
-width: 100%;
-    background-color: rgba(189, 198, 223, 0.774);
+    height: 100%;
+    width: 100%;
+    background-color: rgb(230, 230, 230,1);
     border-radius: 20px;
     position: fixed;
     top:0%;    
-    z-index: 100;
+    z-index: 1000;
     padding-top: 7%;
 }
 #welcomeDiv h1{
     text-align: center;
     color: orangered;
     font-family: 'Pangolin', cursive;
-font-size: 60px;
-font-weight: 800;
+    font-size: 60px;
+    font-weight: 800;
 }
 #welcomeDiv img{
     display: block;
@@ -257,16 +257,42 @@ font-weight: 800;
 }
 
 @keyframes  slide {
-    to {margin-left: 65px;}
-    to {margin-top: -80px;}
-
+    0%{
+        margin-left: 290px;
+        }
+    25%{
+        margin-left: 125px;
+        margin-top: 20px;
+    }
+    50%{
+        background-color: rgb(230, 230, 230,75);
+    }
+    100%{
+        margin-left: 65px;
+        margin-top: -110px;
+    }
     from{height: 400px;}
     to{height: 120px;}
-
+}
+@keyframes  fade {
+    0%{
+        background-color: rgb(230, 230, 230,1);
+        }
+    25%{
+        background-color: rgb(230, 230, 230,1);
+    }
+    50%{
+        background-color: rgb(230, 230, 230,75);
+    }
+    100%{
+        background-color: rgb(230, 230, 230,0);
+    }
 }
 .imgDiv {
     animation: slide  1.5s;
-
+}
+.fadeDive {
+    animation: fade  1.5s;
 }
 
 #pathContainer{
@@ -303,7 +329,6 @@ font-weight: 800;
     left: 0%;
 
     /* z-index: -1; */
-
 }
 
 
@@ -325,3 +350,23 @@ font-weight: 800;
     position: relative;
 
 }
+.blink {
+    animation: blink 0.5s infinite;
+  }
+  @keyframes blink{
+    to { opacity: .0; }
+  }
+  .flex {
+      display: flex;
+      place-content: center;
+
+  }
+  .header-sub-title {
+    /* width: 100%; */
+    color: #4b4b4b;
+    font-family: "Courier";
+    font-size: 60px;
+    padding: 0.1em;
+    /* text-align: center; */
+  }
+

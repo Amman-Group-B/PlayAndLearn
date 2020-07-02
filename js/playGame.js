@@ -252,7 +252,51 @@ function addQuestion() {
 }
 //console.log('questions[0]: ', questions[0]);
 
-// --------------------------- User updates on score -------------------------------//
+// 
+const words = ["Welcome.", "Press on the Logo to continue."];
+let i = 0;
+let timer;
+
+// --------------------------- welcome effect -------------------------------//
+
+function typingEffect() {
+    let word = words[i].split("");
+    var typeSpeed = 1500/word.length;
+	var loopTyping = function() {
+		if (word.length > 0) {
+			document.getElementById('word').innerHTML += word.shift();
+		} else {
+			deletingEffect();
+			return false;
+		};
+		timer = setTimeout(loopTyping, typeSpeed);
+	};
+	loopTyping();
+};
+
+function deletingEffect() {
+    let word = words[i].split("");
+    var deleteSpeed = 1000/word.length;
+	var loopDeleting = function() {
+		if (word.length > 0) {
+			word.pop();
+			document.getElementById('word').innerHTML = word.join("");
+		} else {
+			if (words.length > (i + 1)) {
+				i++;
+			} else {
+				i = 0;
+			};
+			typingEffect();
+			return false;
+		};
+		timer = setTimeout(loopDeleting, deleteSpeed);
+	};
+	timer = setTimeout(loopDeleting, 2000);
+};
+
+typingEffect();
+
 var welcomeGif = document.getElementById("welcomeGif");
 var welcomeDiv = document.getElementById("welcomeDiv");
 var activeUser = JSON.parse(localStorage.getItem('activeUser')) || [];
@@ -267,7 +311,7 @@ function welcomeDisplay(event) {
     event.preventDefault();
     welcomeGif.classList.add('member');
     welcomeGif.classList.add('imgDiv');
-
+    welcomeDiv.classList.add('fadeDive');
     setTimeout(displayNone, 1500);
 
 }
@@ -275,6 +319,8 @@ function welcomeDisplay(event) {
 function displayNone() {
     welcomeDiv.style.display = "none";
 }
+
+// --------------------------- User updates on score -------------------------------//
 
 function updateScore() {
     activeUser[2] += score;
