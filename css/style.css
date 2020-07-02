@@ -10,6 +10,7 @@ header{
     height: 90px;
     padding: 12px 0;
     border : 2px solid black;
+    z-index: 1000;
 }
 footer{
     font-family: 'Pangolin', cursive;
@@ -19,6 +20,7 @@ footer{
     background-color:#FDFFFC;
     padding: 12px 0;
     border : 2px solid black;
+    z-index: 1000;
 }
 header, footer {
     z-index: 999;
@@ -32,7 +34,6 @@ header img{
     left: 65px;
     top: -15px;
     height: 120px;
-    z-index: 1000;
 
 }
 

@@ -58,7 +58,7 @@
             </section>
 
             <div id="controls">
-                <div>
+                <div id='arrowsDiv'>
                     <i id="prev" style="font-size: 4em;" class="fa fa-arrow-circle-left fa-3" aria-hidden="true"></i>
                     <i id="next" style="font-size: 4em; margin: 0 20px;" class="fa fa-arrow-circle-right"
                         aria-hidden="true"></i>
@@ -72,13 +72,15 @@
         </div>
         <button id="startPlayingButton">Start Playing</button>
 
-        
+
         <div id="welcomeDiv">
+
             <img  id="welcomeGif" src="img/logoAnimated.gif" alt="">
             <div class="flex">
                 <p class="header-sub-title" id="word"></p>
                 <p class="header-sub-title blink">|</p>
             </div>
+
         </div>
 
 
@@ -97,8 +99,18 @@
                     <div id="timeGauge"></div>
                 </div>
                 <div id="progress"></div>
-                <div id="scoreContainer" style="display: none"></div>
             </div>
+            <div id="scoreContainer">
+                <img id='emojiImage' src="img/2.png">
+                <p id="percentageResult"></p>
+                <div id='replayButton' >
+                    Play Again
+                </div>
+            </div>
+
+
+
+
         </div>
         <div id="pathContainer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -150,23 +162,23 @@
     </main>
 
     <footer>
-        <div id ="contact"> for more info contact us<br>info@playAndLearn.com </div>
+        <div id="contact"> for more info contact us<br>info@playAndLearn.com </div>
         <div id="copyRight">
             &copy; LTUC
         </div>
         <div>
             <a href="https://www.facebook.com/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
             <a href="https://github.com/login">
-            <i class="fa fa-github" aria-hidden="true"></i></a>
+                <i class="fa fa-github" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/">
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             <a href="https://ads.twitter.com/">
-            <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <i class="fa fa-twitter" aria-hidden="true"></i></a>
         </div>
     </footer>
 </body>
 
-<script src="js/app.js"></script>
+<!-- <script src="js/app.js"></script> -->
 <script src="js/login.js"></script>
 
 <script src="js/questions.js"></script>
