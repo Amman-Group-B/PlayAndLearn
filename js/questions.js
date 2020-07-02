@@ -30,7 +30,7 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
             console.log('general this.imgSrc:', this.imgSrc);
 
             if (this.imgSrc == '') {
-                this.imgSrc = "assets/img/general_information.jpg";
+                this.imgSrc = "img/general_information.jpg";
             }
             if (!localStorage.getItem('generalQuestions')) {
 
@@ -46,7 +46,7 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
             console.log('math this.imgSrc:', this.imgSrc);
 
             if (this.imgSrc == '') {
-                this.imgSrc = "assets/img/math.jpg";
+                this.imgSrc = "img/math.jpg";
             }
             if (!localStorage.getItem('mathQuestions')) {
                 mathQuestions.push(this);
@@ -64,7 +64,7 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
 
             if (this.imgSrc == '') {
                 console.log('No image set');
-                this.imgSrc = "assets/img/Arabic.jpg";
+                this.imgSrc = "img/Arabic.jpg";
             }
             if (!localStorage.getItem('arabicQuestions')) {
                 arabicQuestions.push(this);
@@ -78,7 +78,7 @@ function Question(category, imgSrc, question, choiceA, choiceB, choiceC, correct
             console.log('english this.imgSrc:', this.imgSrc);
 
             if (this.imgSrc == '') {
-                this.imgSrc = "assets/img/english01.jpg";
+                this.imgSrc = "img/english01.jpg";
             }
             if (!localStorage.getItem('englishQuestions')) {
                 console.log('local storage empty');

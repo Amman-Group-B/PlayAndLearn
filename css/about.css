@@ -117,6 +117,7 @@ b {
     background: url(../img/cork-board.png) no-repeat;
     height: 600px;
     margin: 0 25%;
+    width: 100%;
 }
 .mainView, .mainViewImage {
     position: absolute;
@@ -189,25 +190,25 @@ b {
     cursor: pointer;
     z-index: 101;
   }
-   a:nth-child(n) .pin {
+   main a:nth-child(n) .pin {
     background-image: radial-gradient(yellow 50%, black 100%);
   }
-   a:nth-child(3n) .pin {
+  main a:nth-child(3n) .pin {
     background-image: radial-gradient(red 50%, black 100%);
   }
-   a:nth-child(5n) .pin,  a:last-child .pin {
+  main a:nth-child(5n) .pin, main a:last-child .pin {
     background-image: radial-gradient(blue 50%, white 100%);
   }
-   a:nth-child(2n),  a:nth-child(7) {
+  main a:nth-child(2n), main a:nth-child(7) {
     transform: rotate(-3.5deg);
     background-color: rgba(104, 97, 207, 0.8);
   }
   
-   a:nth-child(3n), a:first-child {
+  main a:nth-child(3n), main a:first-child {
     transform: rotate(-10.5deg);
     background-color: rgba(51, 255, 255, 0.8);
   }
-   a:nth-child(5n),  a:last-child {
+  main a:nth-child(5n), main a:last-child {
     transform: rotate(7.5deg);
     background-color: rgba(255, 255, 51, 0.8);
   }
@@ -218,8 +219,8 @@ b {
   }
   .sticky2 {
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 40%;
+    left: 45%;
   }
   .sticky3 {
     position: absolute;
