@@ -16,8 +16,9 @@ function flipMe(event) {
 }
 
 var flashCardArea = document.getElementById('cards');
-var questionBank = JSON.parse(localStorage.getItem('questionsBank'));
-console.log(questionBank)
+var questionBank = JSON.parse(localStorage.getItem('generalQuestions'));
+
+console.log('this is the bank ', questionBank)
 
 
 
@@ -42,11 +43,12 @@ function randomCard() {
   flashCardArea.innerHTML = '';
 
   var i = Math.floor(Math.random()*questionBank.length);
-  var j = Math.floor(Math.random()*questionBank[i].length);
+  // var j = Math.floor(Math.random()*questionBank[i].length);
+  console.log('this is question', questionBank[i])
 
   uniqueId +=1; 
-  answerText = questionBank[i][j].correctAnswer
-
+  answerText = questionBank[i].correctAnswer
+console.log('this is answer', answerText)
   answerText = 'choice'+answerText
   var cardHolder = document.createElement('div'); // builds the card div
   cardHolder.id = uniqueId;
@@ -56,20 +58,20 @@ function randomCard() {
   var frontCard = document.createElement('div'); // builds front face
   frontCard.classList.add('card__face')
   frontCard.classList.add('card__face--front')
-  frontCard.innerHTML = '<p>' + questionBank[i][j].question + '</p>';
+  frontCard.innerHTML = '<p>' + questionBank[i].question + '</p>';
   cardHolder.appendChild(frontCard);
   
   
   var backCard = document.createElement('div'); // builds back face
   backCard.classList.add('card__face')
   backCard.classList.add('card__face--back')
-  backCard.innerHTML = '<p>' + questionBank[i][j][answerText] + '</p>';
+  backCard.innerHTML = '<p>' + questionBank[i][answerText] + '</p>';
   cardHolder.appendChild(backCard);
   
   var card2 = document.getElementById(uniqueId);
   card2.addEventListener('click',flipMe);
   card2.classList.add('animate')
-  console.log(questionBank[i][j])
+  console.log(questionBank[i])
 }
 
 // for (var i = 0; i < questionBank.length; i++) {
